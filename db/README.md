@@ -12,6 +12,17 @@ npm run typecheck
 
 > L'avviso `ExperimentalWarning: SQLite is an experimental feature` è normale, si può ignorare.
 
+## Voti dal calendario della demo
+
+`npm run reset` carica i 18 meeting di esempio dello script della demo. Per usare invece i voti del
+calendario del gruppo DB (utilità ed effort basso/medio/alto diventano 1/3/5):
+
+```powershell
+$env:SEED_FILE="../backend/example-data/calendario.json"; npm run reset
+```
+
+Va usato insieme a `MOCK_DATA_FILE` nel backend (vedi `backend/README.md`).
+
 ## File
 
 - `schema.sql`: tabelle `events_cache` (fotografia degli eventi valutati) e `ratings` (rating + effort 1-5)

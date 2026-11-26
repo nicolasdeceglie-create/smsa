@@ -13,6 +13,18 @@ npm test           # test HTTP d'integrazione con SQLite in memoria e calendario
 
 Con `MOCK=true` (default) usa eventi finti in memoria, **scritture comprese**: la demo funziona anche senza Google e senza rete.
 
+## Dati della demo
+
+Con `MOCK=true` il backend usa eventi finti scritti nel codice. Per avere la settimana piena del gruppo DB
+(62 meeting dal 16 novembre al 4 dicembre, con orari e durate diverse) aggiungete al `.env`:
+
+```
+MOCK_DATA_FILE=./example-data/calendario.json
+```
+
+Gli id degli eventi (`evt_001`, ...) sono gli stessi che usa il seed del database con `SEED_FILE`, così
+voti e previsioni si collegano ai meeting giusti. La conversione del formato è in `shared/demoData.ts`.
+
 ## Endpoint
 
 | Metodo | Path | Descrizione |

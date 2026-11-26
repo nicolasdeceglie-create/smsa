@@ -53,6 +53,9 @@ curl -X PATCH http://localhost:3001/events/mock-planning -H "Content-Type: appli
 
 Entro 3 secondi l'evento lampeggia con "Modificato da Claude" e compare in "Attività di Claude".
 
+Per vedere il calendario pieno (62 meeting, orari e durate diverse) anche con il backend, usate i dati
+della demo: `SEED_FILE` per il database e `MOCK_DATA_FILE` per il backend, come spiegato nel README principale.
+
 ## Test
 
 Vitest con Testing Library, in `test/`:
@@ -63,7 +66,7 @@ Vitest con Testing Library, in `test/`:
 | `activity.test.ts` | confronto tra due letture: creato, spostato, rinominato, eliminato |
 | `scores.test.ts` | livelli, quadranti, colori, impact e suggerimenti |
 | `dates.test.ts` | settimana da lunedì, intervalli a cavallo di due mesi, formati |
-| `mock.test.ts` | lettura di `calendario.json` |
+| `mock.test.ts` | dati della demo: tre settimane piene, durate da 30 minuti a 2 ore, nessuna sovrapposizione, voti sui passati e impact sui futuri |
 | `components.test.tsx` | blocco evento, riquadro di dettaglio con le azioni, pannello laterale |
 | `useMeetings.test.ts` | conferma, elimina, modifica e simulazione di Claude |
 
