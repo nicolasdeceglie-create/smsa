@@ -23,8 +23,8 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>SMSA</h1>
-        <span className="subtitle">Il tuo calendario, gestito da Claude</span>
+        <h1>MeetWise</h1>
+        <span className="subtitle">Meno riunioni, più impatto</span>
         <div className="header-right">
           {health.data?.mock && <span className="badge badge-mock">MOCK</span>}
           <span className={`dot ${offline ? "dot-off" : "dot-on"}`} />

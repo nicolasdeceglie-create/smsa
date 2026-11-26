@@ -38,8 +38,8 @@ export function Header({ weekStart, status, onPrev, onNext, onToday }: Props) {
                     </svg>
                 </div>
                 <div>
-                    <span className={styles.name}>SMSA</span>
-                    <span className={styles.tagline}>Il tuo calendario, gestito da Claude</span>
+                    <span className={styles.name}>MeetWise</span>
+                    <span className={styles.tagline}>Meno riunioni, più impatto</span>
                 </div>
             </div>
 

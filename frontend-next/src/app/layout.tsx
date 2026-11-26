@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const grotesk = Space_Grotesk({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-grotesk" });
 
 export const metadata: Metadata = {
-    title: "SMSA · Il tuo calendario, gestito da Claude",
+    title: "MeetWise · Meno riunioni, più impatto",
     description: "Calendario settimanale con utilità, effort e impact dei meeting.",
 };
 
