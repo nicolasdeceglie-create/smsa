@@ -1,0 +1,69 @@
+{
+  "calendar_owner": "marco.rossi@azienda.it",
+  "events": [
+    {
+      "id": "evt_001",
+      "title": "Allineamento Settimanale Cross-Funzionale",
+      "description": "Aggiornamento generico sullo stato avanzamento lavori di tutti i reparti.",
+      "start": "2026-11-23T10:00:00+01:00",
+      "end": "2026-11-23T11:00:00+01:00",
+      "is_recurring": true,
+      "organizer": "elena.neri@azienda.it",
+      "attendees": [
+        { "email": "marco.rossi@azienda.it", "response_status": "accepted" },
+        { "email": "giulia.bianchi@azienda.it", "response_status": "accepted" },
+        { "email": "luca.verdi@azienda.it", "response_status": "accepted" }
+      ],
+      "utilita": "basso",
+      "effort": "alto",
+      "likeability": 22
+    },
+    {
+      "id": "evt_002",
+      "title": "Review Roadmap Q1",
+      "description": "Definizione delle priorità strategiche e allocazione budget per il primo trimestre.",
+      "start": "2026-11-24T15:00:00+01:00",
+      "end": "2026-11-24T16:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "alessandro.conti@azienda.it",
+      "attendees": [
+        { "email": "marco.rossi@azienda.it", "response_status": "accepted" },
+        { "email": "sara.galli@azienda.it", "response_status": "accepted" }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 94
+    },
+    {
+      "id": "evt_003",
+      "title": "Deep-dive Architettura API e Integrazione DB",
+      "description": "Analisi tecnica dei colli di bottiglia sulle chiamate REST e migrazione database.",
+      "start": "2026-11-27T11:00:00+01:00",
+      "end": "2026-11-27T12:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "davide.ferrari@azienda.it",
+      "attendees": [
+        { "email": "marco.rossi@azienda.it", "response_status": "needsAction" },
+        { "email": "luca.verdi@azienda.it", "response_status": "accepted" }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 35
+    },
+    {
+      "id": "evt_004",
+      "title": "Raccolta Feedback Funzionalità Onboarding",
+      "description": "Analisi qualitativa dei primi test utente sul nuovo flusso di registrazione.",
+      "start": "2026-11-27T14:30:00+01:00",
+      "end": "2026-11-27T15:15:00+01:00",
+      "is_recurring": false,
+      "organizer": "chiara.russo@azienda.it",
+      "attendees": [
+        { "email": "marco.rossi@azienda.it", "response_status": "needsAction" }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 58
+    }
+  ]
+}
