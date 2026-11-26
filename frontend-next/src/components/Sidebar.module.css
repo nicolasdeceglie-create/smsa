@@ -1,0 +1,289 @@
+.side {
+    flex: 0 0 340px;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.side h2 {
+    font-family: var(--font-title);
+    font-size: 14px;
+}
+
+.empty {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--muted);
+}
+
+/* ---- attività di Claude ---- */
+.activity {
+    flex: none;
+    background: var(--navy);
+    color: #fff;
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.activity .empty {
+    color: #b9c8e6;
+}
+
+.activityHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.activityHead button {
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #34507d;
+    background: var(--navy-soft);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.listening {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #bbf7d0;
+}
+
+.listening span {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #4ade80;
+    animation: pulse 1.6s ease-in-out infinite;
+}
+
+.activity ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12.5px;
+}
+
+.activity li {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 6px;
+}
+
+.time {
+    color: #93c5fd;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- schede ---- */
+.card {
+    flex: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.grow {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.cardHead {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.cardHead span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ---- impact ---- */
+.impactList {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.impactRow {
+    flex: none;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+    align-items: center;
+    padding: 5px 6px;
+    border-radius: 10px;
+    border: none;
+    background: var(--bg);
+    text-align: left;
+}
+
+.impactRow:hover,
+.current {
+    background: var(--blue-tint);
+}
+
+.badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.badge strong {
+    font-size: 16px;
+}
+
+.badge small {
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.good {
+    background: var(--good-bg);
+    color: var(--good-fg);
+}
+
+.mid {
+    background: var(--mid-bg);
+    color: var(--mid-fg);
+}
+
+.bad {
+    background: var(--bad-bg);
+    color: var(--bad-fg);
+}
+
+.goodText {
+    color: var(--good-fg);
+}
+
+.midText {
+    color: var(--mid-fg);
+}
+
+.badText {
+    color: var(--bad-fg);
+}
+
+.impactText {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.impactTitle {
+    font-size: 13px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.impactMeta {
+    font-size: 11.5px;
+    color: var(--muted);
+}
+
+.scale {
+    flex: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 11px;
+    color: var(--muted-strong);
+    margin-top: 4px;
+}
+
+/* ---- suggerimenti ---- */
+.tip {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: var(--bg);
+}
+
+.tipHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.tipHead strong {
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tipText {
+    font-size: 11.5px;
+    line-height: 1.35;
+    color: var(--muted-strong);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.qChip {
+    flex: none;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.q_keep {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.q_optimize {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.q_shorten {
+    background: #cffafe;
+    color: #155e75;
+}
+
+.q_drop {
+    background: #fee2e2;
+    color: #991b1b;
+}
