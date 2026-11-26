@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "smsa": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\User\\smsa\\mcp\\node_modules\\tsx\\dist\\cli.mjs",
+        "C:\\Users\\User\\smsa\\mcp\\src\\index.ts"
+      ],
+      "env": {
+        "BACKEND_URL": "http://localhost:3001",
+        "TIMEZONE": "Europe/Rome"
+      }
+    }
+  }
+}
