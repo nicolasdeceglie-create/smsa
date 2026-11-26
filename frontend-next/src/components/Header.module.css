@@ -118,29 +118,22 @@
     background: var(--q-drop);
 }
 
-.views {
-    display: flex;
-    border: 1px solid #c9d6e8;
-    border-radius: 999px;
-    overflow: hidden;
-}
+@media (max-width: 700px) {
+    .header {
+        padding: 8px 12px;
+        gap: 8px 12px;
+    }
 
-.views button {
-    height: 38px;
-    padding: 0 14px;
-    border: none;
-    background: var(--card);
-    font-size: 13px;
-    font-weight: 500;
-}
+    .tagline {
+        display: none;
+    }
 
-.views button:disabled {
-    cursor: not-allowed;
-    color: var(--muted);
-}
+    .range {
+        font-size: 17px;
+    }
 
-.views .active {
-    background: var(--blue-tint);
-    color: #1e3a8a;
-    font-weight: 700;
+    .right {
+        margin-left: 0;
+        width: 100%;
+    }
 }

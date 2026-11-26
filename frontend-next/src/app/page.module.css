@@ -1,4 +1,4 @@
-/* tutta l'app sta in una schermata: niente scroll */
+/* desktop: tutta l'app sta in una schermata, niente scroll */
 .app {
     height: 100vh;
     overflow: hidden;
@@ -12,4 +12,17 @@
     display: flex;
     gap: 12px;
     padding: 12px;
+}
+
+/* tablet e telefono: la pagina scorre e il pannello va sotto il calendario */
+@media (max-width: 900px) {
+    .app {
+        height: auto;
+        min-height: 100vh;
+        overflow: visible;
+    }
+
+    .body {
+        flex-direction: column;
+    }
 }

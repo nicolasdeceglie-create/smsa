@@ -18,10 +18,10 @@ describe("EventCard", () => {
         expect(screen.queryByText(/Impact/)).not.toBeInTheDocument();
     });
 
-    it("meeting breve: etichette corte U ed E", () => {
+    it("prepara anche le etichette corte U ed E", () => {
         render(<EventCard meeting={byId("evt_019")} style={{}} selected={false} flashing={false} onOpen={() => {}} />);
-        expect(screen.getByText("U · alta")).toBeInTheDocument();
-        expect(screen.getByText("E · basso")).toBeInTheDocument();
+        expect(screen.getByText("U alta")).toBeInTheDocument();
+        expect(screen.getByText("E basso")).toBeInTheDocument();
     });
 
     it("meeting futuro: impact al posto di utilità ed effort", () => {
