@@ -7,7 +7,7 @@ La **web UI** mostra in tempo reale cosa succede.
 ```
 Claude Desktop ──stdio──► mcp/ ──HTTP──► backend/ ──► Google Calendar (lettura + scrittura)
                                              │  └──► Calendari ICS / iCloud (sola lettura)
-              frontend/ ──HTTP (/api)────────┤
+         frontend-next/ ──HTTP (/api)────────┤
                                              └──► db/ (SQLite: rating + effort)
                          shared/types.ts  ←  contratti comuni a tutti i team
 ```
@@ -20,7 +20,6 @@ Claude Desktop ──stdio──► mcp/ ──HTTP──► backend/ ──► 
 | `db/` | Database | Schema SQLite, funzioni di accesso, seed e reset per la demo |
 | `backend/` | Backend | API REST Express, connettori Google / ICS / mock |
 | `mcp/` | Server MCP | Server MCP con 9 tool + 1 prompt per Claude Desktop |
-| `frontend/` | Frontend | Vite + React + FullCalendar: calendario, matrice, insight |
 | `frontend-next/` | Frontend | Next.js: calendario settimanale a schermo intero con utilità, effort e impact, dettaglio evento, attività di Claude. Vedi il suo README |
 
 Ogni cartella ha il suo `README.md` con **i ticket del team** (✅ già fatto nello scheletro, 🔲 da fare).
@@ -47,9 +46,10 @@ copy .env.example .env # su Mac/Linux: cp .env.example .env
 npm run dev            # → http://localhost:3001/health
 
 # 3. Frontend  (nuovo terminale)
-cd frontend
+cd frontend-next
 npm install
-npm run dev            # → http://localhost:5173
+copy .env.example .env.local   # poi mettete NEXT_PUBLIC_DATA_SOURCE=api (vedi frontend-next/README.md)
+npm run dev            # → http://localhost:3000
 
 # 4. Server MCP
 cd mcp
