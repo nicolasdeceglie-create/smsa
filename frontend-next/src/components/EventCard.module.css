@@ -51,13 +51,13 @@
 
 .title {
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 12px;
     font-weight: 700;
     line-height: 15px;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     flex: none;
 }
 
@@ -183,11 +183,56 @@
     .time {
         display: none;
     }
+    .title {
+        font-size: 11.5px;
+        line-height: 13px;
+    }
 }
 
+/* 45 minuti: titolo su due righe più piccole, etichette corte sotto */
 @container ev (max-height: 62px) {
     .title {
-        -webkit-line-clamp: 1;
+        -webkit-line-clamp: 2;
+        font-size: 11px;
+        line-height: 12px;
+    }
+    .body {
+        gap: 3px;
+        padding-top: 5px;
+    }
+}
+
+/* schermi piccoli: blocco basso e colonna stretta. I voti diventano pallini
+   a destra, così il titolo ha tre righe tutte per sé */
+@container ev (max-height: 62px) and (max-width: 155px) {
+    .scores {
+        display: none !important;
+    }
+    .body {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 5px;
+        padding: 5px 6px 2px 7px;
+    }
+    .title {
+        flex: 1;
+        min-width: 0;
+        -webkit-line-clamp: 3;
+        font-size: 11px;
+        line-height: 12px;
+    }
+    .dots {
+        display: flex;
+        flex: none;
+        gap: 3px;
+        align-items: center;
+        padding-top: 1px;
+    }
+}
+
+@container ev (max-height: 62px) and (min-height: 54px) and (max-width: 155px) {
+    .title {
+        -webkit-line-clamp: 4;
     }
 }
 
@@ -241,6 +286,16 @@
         -webkit-line-clamp: 2;
         font-size: 11px;
         line-height: 12px;
+    }
+}
+
+@container ev (max-height: 44px) and (min-height: 40px) and (max-width: 155px) {
+    .title {
+        -webkit-line-clamp: 3;
+    }
+    .body {
+        align-items: flex-start;
+        padding-top: 3px;
     }
 }
 
