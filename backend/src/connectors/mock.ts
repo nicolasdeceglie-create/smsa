@@ -64,6 +64,34 @@ function initialEvents(): CalendarEvent[] {
     ev("mock-ics-gym", "Palestra", 0, "19:00", "20:00", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
     ev("mock-ics-dentist", "Dentista", 2, "08:00", "08:45", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
     ev("mock-ics-dinner", "Cena con amici", 4, "20:30", "22:30", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
+    ev("mock-ics-calcetto", "Calcetto", 5, "20:00", "21:00", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
+    ev("mock-ics-genitori", "Pranzo dai genitori", 9, "13:00", "14:30", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
+  );
+
+  // Altri meeting per riempire le settimane. Molti titoli sono gli stessi dello storico in db/src/seed.ts,
+  // così predict_meetings ha già valutazioni simili da cui imparare.
+  const UX = ["sara.galli@azienda.it", "veronica.monti@azienda.it", "chiara.russo@azienda.it"];
+  list.push(
+    // settimana scorsa
+    ev("mock-1to1-past", "1:1 con Giulia", -7, "16:00", "16:30", [TEAM[0]]),
+    ev("mock-retro-1", "Retrospettiva", -6, "16:45", "17:30", TEAM),
+    ev("mock-commerciale-1", "Allineamento commerciale", -4, "11:00", "12:30", ["stefano.colombo@azienda.it"]),
+    ev("mock-coffee-1", "Caffè con Davide", -2, "10:30", "10:50", [TEAM[1]]),
+    // questa settimana e le prossime due
+    ev("mock-lunch-cto", "Pranzo con Valeria (CTO)", 0, "12:30", "13:30", ["valeria.marchetti@azienda.it"]),
+    ev("mock-codereview", "Code review modulo pagamenti", 1, "16:45", "17:45", [TEAM[1], "ilaria.deluca@azienda.it"]),
+    ev("mock-ux", "Workshop UX onboarding", 2, "12:30", "13:45", UX),
+    ev("mock-commerciale-2", "Allineamento commerciale", 3, "16:00", "17:30", ["stefano.colombo@azienda.it", "alessandro.conti@azienda.it"]),
+    ev("mock-1to1-davide", "1:1 con Davide", 4, "17:30", "18:00", [TEAM[1]]),
+    ev("mock-security", "Security review infrastruttura", 6, "10:00", "11:00", ["pietro.messina@azienda.it", "andrea.moretti@azienda.it"]),
+    ev("mock-1to1-2", "1:1 con Giulia", 7, "16:00", "16:30", [TEAM[0]]),
+    ev("mock-coffee-2", "Caffè con Davide", 8, "10:30", "10:50", [TEAM[1]]),
+    ev("mock-retro-2", "Retrospettiva", 9, "16:45", "17:30", TEAM),
+    ev("mock-fintech-demo", "Demo cliente FinTech Italia", 10, "14:00", "15:00", ["r.marino@fintechitalia.it", "alessandro.conti@azienda.it"]),
+    ev("mock-planning-2", "Sprint planning", 11, "10:00", "12:00", TEAM),
+    ev("mock-qa", "Allineamento QA release", 12, "14:00", "14:45", ["caterina.lombardo@azienda.it", "emma.sala@azienda.it"]),
+    ev("mock-status-3", "Weekly status report", 13, "15:00", "16:00", TEAM),
+    ev("mock-1to1-3", "1:1 con Giulia", 14, "16:00", "16:30", [TEAM[0]]),
   );
   return list;
 }
