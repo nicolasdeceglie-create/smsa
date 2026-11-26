@@ -1,5 +1,8 @@
 // ============================================================
-//  SMSA — Server MCP (stdio) per Claude Desktop.
+//  SMSA — Server MCP.
+//   - stdio (questo file):  Claude Desktop sul PC
+//   - HTTP  (src/http.ts):  claude.ai e app Claude sul cellulare, tramite ngrok
+//  Entrambi usano createServer() qui sotto: i tool sono scritti UNA volta sola.
 //
 //  Le DESCRIZIONI dei tool sono la parte più importante (ticket M6):
 //  è da lì che Claude capisce quale tool usare e con quali parametri.
@@ -12,6 +15,12 @@ import { api } from "./api.ts";
 
 const TZ = process.env.TIMEZONE ?? "Europe/Rome";
 
+/**
+ * Crea un server MCP con tutti i tool registrati.
+ * Per aggiungere un tool: server.registerTool(...) qui dentro, PRIMA di "return server" in fondo al file.
+ * (Il corpo non è indentato apposta, per non creare conflitti git con le modifiche ai tool.)
+ */
+export function createServer(): McpServer {
 const server = new McpServer({ name: "smsa", version: "0.1.0" });
 
 /** Risposta testuale per Claude (JSON compatto e leggibile) */
@@ -261,6 +270,13 @@ server.registerPrompt(
   })
 );
 
-const transport = new StdioServerTransport();
-await server.connect(transport);
-console.error("SMSA MCP server avviato (stdio)");
+return server;
+} // fine createServer()
+
+// Avvio in stdio solo se questo file è lanciato direttamente (Claude Desktop, inspector).
+// Quando lo importa http.ts non parte.
+if (/index\.(ts|js)$/.test(process.argv[1] ?? "")) {
+  const transport = new StdioServerTransport();
+  await createServer().connect(transport);
+  console.error("SMSA MCP server avviato (stdio)");
+}
