@@ -8,6 +8,7 @@ copy .env.example .env
 npm run dev        # riavvio automatico a ogni modifica
 npm run auth       # login Google (ticket B2), una volta sola
 npm run typecheck
+npm test           # test HTTP d'integrazione con SQLite in memoria e calendario mock
 ```
 
 Con `MOCK=true` (default) usa eventi finti in memoria, **scritture comprese**: la demo funziona anche senza Google e senza rete.
