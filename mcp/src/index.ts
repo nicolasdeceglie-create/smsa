@@ -199,6 +199,47 @@ server.registerTool(
   async () => run(() => api.summary())
 );
 
+// ---------- Previsione: impara dai rating dell'utente ----------
+server.registerTool(
+  "predict_meetings",
+  {
+    title: "Previsione sui meeting futuri",
+    description:
+      "Per i meeting FUTURI non ancora valutati prevede rating (utilità) ed effort, da 1 a 5, imparando dalle valutazioni " +
+      "passate dell'utente: pesano di più i meeting con lo stesso titolo, titoli simili e le stesse persone. " +
+      "Due regole in più: se partecipa la direzione o un cliente chiave l'utilità sale; se ci sono già 2 o più persone " +
+      "del team dell'utente scende (può mandare qualcun altro). " +
+      "Ogni previsione ha quadrante, affidabilità (alta / media / bassa) e i motivi: riportali all'utente. " +
+      "Usalo per domande come \"a quali riunioni devo andare?\", \"cosa posso saltare questa settimana?\". " +
+      "Le previsioni migliorano a ogni rate_meeting: se l'affidabilità è bassa, invita l'utente a valutare i meeting simili.\n" + MATRIX,
+    inputSchema: {
+      from: isoDate.optional().describe("Inizio intervallo (ISO 8601). Default: adesso."),
+      to: isoDate.optional().describe("Fine intervallo (ISO 8601). Default: tra 14 giorni."),
+    },
+    annotations: { readOnlyHint: true },
+  },
+  async ({ from, to }) => run(() => api.predictions(from, to))
+);
+
+// ---------- Delega: dall'organigramma ----------
+server.registerTool(
+  "suggest_delegate",
+  {
+    title: "A chi delegare un meeting",
+    description:
+      "Suggerisce fino a 3 colleghi del team dell'utente (dall'organigramma aziendale) da mandare a un meeting al suo posto, " +
+      "il migliore per primo, ciascuno con i motivi. Criteri: competenze sul tema del meeting; se il meeting è critico " +
+      "(direzione, cliente chiave o utilità prevista alta) serve autonomia decisionale; se è poco critico si preferisce " +
+      "far crescere un junior; deve essere libero in quell'orario. Esclude chi è già invitato. " +
+      "Serve l'id dell'evento (da list_events o predict_meetings). " +
+      "Per delegare davvero: chiedi conferma all'utente, poi aggiungi il collega ai partecipanti con update_event " +
+      "(lista COMPLETA dei partecipanti).",
+    inputSchema: { event_id: z.string().describe("id dell'evento (da list_events o predict_meetings)") },
+    annotations: { readOnlyHint: true },
+  },
+  async ({ event_id }) => run(() => api.delegates(event_id))
+);
+
 // ---------- M12: prompt pronto per la demo ----------
 server.registerPrompt(
   "weekly_review",
@@ -214,7 +255,7 @@ server.registerPrompt(
         text:
           "Fai una review dei miei meeting: usa get_meeting_insights e get_meeting_history, " +
           "dimmi quali tenere, ottimizzare, accorciare o eliminare, poi guarda la mia agenda della prossima settimana " +
-          "con list_events e proponimi modifiche concrete. Non modificare nulla senza la mia conferma.",
+          "con predict_meetings e proponimi modifiche concrete, anche a chi delegare con suggest_delegate. Non modificare nulla senza la mia conferma.",
       },
     }],
   })

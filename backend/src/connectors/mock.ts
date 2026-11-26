@@ -7,7 +7,8 @@ import type { CalendarEvent, EventPatch, NewEvent } from "../../../shared/types.
 import { toZonedIso, todayIn, zonedDate } from "../../../shared/time.ts";
 import { config } from "../config.ts";
 
-const TEAM = ["giulia.rossi@example.com", "marco.bianchi@example.com", "sara.verdi@example.com"];
+// Persone dell'organigramma (backend/data/organigramma.json); l'utente è marco.rossi@azienda.it
+const TEAM = ["giulia.bianchi@azienda.it", "davide.ferrari@azienda.it", "sara.galli@azienda.it"];
 
 /** Giorno a partire da oggi (offset in giorni) in formato YYYY-MM-DD */
 function day(offset: number): string {
@@ -53,7 +54,11 @@ function initialEvents(): CalendarEvent[] {
     ev("mock-1to1", "1:1 con Giulia", 0, "16:00", "16:30", [TEAM[0]]),
     ev("mock-planning", "Sprint planning", 1, "10:00", "12:00", TEAM),
     ev("mock-review", "Review architettura", 2, "14:00", "15:00", TEAM),
-    ev("mock-acme", "Call con cliente Acme", 3, "11:00", "12:00", ["cliente@acme.example"]),
+    ev("mock-fintech", "Call con cliente FinTech Italia", 3, "11:00", "12:00", ["r.marino@fintechitalia.it"]),
+    // Inviti nuovi, mai valutati: servono per previsione e delega
+    ev("mock-deepdive", "Deep-dive architettura API e integrazione DB", 5, "14:00", "15:00", ["davide.ferrari@azienda.it", "luca.verdi@azienda.it"]),
+    ev("mock-onboarding", "Raccolta feedback funzionalità onboarding", 7, "14:30", "15:15", ["chiara.russo@azienda.it"]),
+    ev("mock-roadmap", "Review roadmap Q1", 8, "15:00", "16:00", ["alessandro.conti@azienda.it", "sara.galli@azienda.it"]),
     // Eventi "iCloud" in sola lettura, per mostrare il multi-calendario
     ev("mock-ics-gym", "Palestra", 0, "19:00", "20:00", [], { source: "ics", calendar: "iCloud personale", readonly: true }),
     ev("mock-ics-dentist", "Dentista", 2, "08:00", "08:45", [], { source: "ics", calendar: "iCloud personale", readonly: true }),

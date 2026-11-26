@@ -30,6 +30,8 @@ Il backend deve essere avviato (`cd backend && npm run dev`).
 | `rate_meeting` | Salva **rating** (utilità) ed **effort** (sforzo), 1-5 |
 | `get_meeting_history` | Tutte le valutazioni con i dettagli |
 | `get_meeting_insights` | Medie per meeting + quadrante |
+| `predict_meetings` | Rating ed effort **previsti** per i meeting futuri non valutati: impara dai rating |
+| `suggest_delegate` | Fino a 3 colleghi del team (dall'organigramma) a cui delegare un meeting |
 | prompt `weekly_review` | Review guidata della settimana |
 
 ## Ticket

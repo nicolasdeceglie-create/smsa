@@ -201,3 +201,39 @@ test("valida i parametri degli slot liberi", async () => {
   assert.ok(slots.length > 0);
   assert.ok(slots.every((slot) => new Date(slot.end) > new Date(slot.start)));
 });
+
+type Prediction = { event_id: string; rating: number; effort: number; confidence: string; reasons: string[] };
+
+test("prevede i meeting non valutati e impara dai rating", async () => {
+  const before = (await (await fetch(`${baseUrl}/predictions`)).json() as Prediction[])
+    .find((p) => p.event_id === "mock-status-2");
+  assert.ok(before, "il prossimo weekly status report è tra i meeting da prevedere");
+  assert.equal(before.confidence, "bassa");
+
+  const saved = await fetch(`${baseUrl}/ratings`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ event_id: "mock-status-1", rating: 1, effort: 5 }),
+  });
+  assert.equal(saved.status, 201);
+
+  const predictions = await (await fetch(`${baseUrl}/predictions`)).json() as Prediction[];
+  const after = predictions.find((p) => p.event_id === "mock-status-2");
+  assert.ok(after);
+  assert.ok(after.rating < before.rating, "un weekly inutile abbassa l'utilità prevista del prossimo");
+  assert.ok(after.effort > before.effort);
+  assert.ok(after.reasons.some((r) => r.startsWith("stesso meeting già valutato")));
+  assert.ok(!predictions.some((p) => p.event_id === "mock-status-1"), "i meeting già valutati non si prevedono");
+});
+
+test("suggerisce a chi delegare dall'organigramma", async () => {
+  const res = await fetch(`${baseUrl}/events/mock-deepdive/delegates`);
+  assert.equal(res.status, 200);
+  const body = await res.json() as { critical: boolean; candidates: Array<{ email: string; reasons: string[] }> };
+  assert.equal(body.candidates.length, 3);
+  assert.ok(!body.candidates.some((c) => c.email === "davide.ferrari@azienda.it"), "chi è già invitato non si delega");
+  assert.ok(body.candidates[0].reasons.some((r) => r.startsWith("competenze sul tema")));
+
+  const ceo = await (await fetch(`${baseUrl}/events/mock-roadmap/delegates`)).json() as { critical: boolean };
+  assert.equal(ceo.critical, true, "con il CEO il meeting è critico");
+});

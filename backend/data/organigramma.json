@@ -1,0 +1,2208 @@
+{
+  "company": "TechCore Solutions",
+  "employees": [
+    {
+      "email": "alessandro.conti@azienda.it",
+      "nome": "Alessandro Conti",
+      "ruolo": "CEO",
+      "team": "executive",
+      "manager_email": null,
+      "anzianita_aziendale_anni": 10,
+      "seniority": "Executive",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "strategia",
+        "budget",
+        "business_development",
+        "gestione_clienti_chiave"
+      ],
+      "growth_areas": []
+    },
+    {
+      "email": "valeria.marchetti@azienda.it",
+      "nome": "Valeria Marchetti",
+      "ruolo": "CTO",
+      "team": "executive",
+      "manager_email": "alessandro.conti@azienda.it",
+      "anzianita_aziendale_anni": 9,
+      "seniority": "Executive",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "strategia_tecnologica",
+        "architettura_enterprise",
+        "innovazione",
+        "budget"
+      ],
+      "growth_areas": []
+    },
+    {
+      "email": "stefano.colombo@azienda.it",
+      "nome": "Stefano Colombo",
+      "ruolo": "COO",
+      "team": "executive",
+      "manager_email": "alessandro.conti@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Executive",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "operations",
+        "process_improvement",
+        "supply_chain",
+        "gestione_fornitori"
+      ],
+      "growth_areas": []
+    },
+    {
+      "email": "marco.rossi@azienda.it",
+      "nome": "Marco Rossi",
+      "ruolo": "Software Engineering Manager",
+      "team": "team software",
+      "manager_email": "valeria.marchetti@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "architettura_software",
+        "backend",
+        "api",
+        "roadmap_prodotto",
+        "project_management"
+      ],
+      "growth_areas": [
+        "budgeting",
+        "strategia"
+      ]
+    },
+    {
+      "email": "davide.ferrari@azienda.it",
+      "nome": "Davide Ferrari",
+      "ruolo": "Senior Backend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "api",
+        "database",
+        "microservizi",
+        "sicurezza_applicativa"
+      ],
+      "growth_areas": [
+        "architettura_cloud",
+        "team_management"
+      ]
+    },
+    {
+      "email": "sara.galli@azienda.it",
+      "nome": "Sara Galli",
+      "ruolo": "Frontend & UX Lead",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 5,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "ux_ui",
+        "design_system",
+        "accessibilita",
+        "user_research"
+      ],
+      "growth_areas": [
+        "product_strategy"
+      ]
+    },
+    {
+      "email": "matteo.lombardi@azienda.it",
+      "nome": "Matteo Lombardi",
+      "ruolo": "Full-Stack Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "backend",
+        "api",
+        "testing_automatico"
+      ],
+      "growth_areas": [
+        "architettura_software",
+        "performance_tuning"
+      ]
+    },
+    {
+      "email": "giulia.bianchi@azienda.it",
+      "nome": "Giulia Bianchi",
+      "ruolo": "Junior Software Developer",
+      "team": "team software",
+      "manager_email": "sara.galli@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "testing",
+        "documentazione_tecnica",
+        "bug_fixing"
+      ],
+      "growth_areas": [
+        "api",
+        "user_research",
+        "gestione_requisiti"
+      ]
+    },
+    {
+      "email": "luca.verdi@azienda.it",
+      "nome": "Luca Verdi",
+      "ruolo": "Hardware Team Lead",
+      "team": "team hardware",
+      "manager_email": "valeria.marchetti@azienda.it",
+      "anzianita_aziendale_anni": 5,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "pcb_design",
+        "embedded",
+        "sensoristica",
+        "prototipazione",
+        "certificazioni_hw"
+      ],
+      "growth_areas": [
+        "supply_chain",
+        "budgeting"
+      ]
+    },
+    {
+      "email": "federico.esposito@azienda.it",
+      "nome": "Federico Esposito",
+      "ruolo": "Firmware Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "firmware",
+        "embedded",
+        "c_cpp",
+        "protocolli_iot",
+        "debugging_hw"
+      ],
+      "growth_areas": [
+        "architettura_embedded",
+        "sicurezza_iot"
+      ]
+    },
+    {
+      "email": "chiara.russo@azienda.it",
+      "nome": "Chiara Russo",
+      "ruolo": "Junior Hardware Test Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_hw",
+        "qa",
+        "documentazione_tecnica",
+        "assemblaggio_prototipi"
+      ],
+      "growth_areas": [
+        "pcb_design",
+        "certificazioni_hw",
+        "firmware"
+      ]
+    },
+    {
+      "email": "andrea.moretti@azienda.it",
+      "nome": "Andrea Moretti",
+      "ruolo": "System & Cloud Lead",
+      "team": "team system",
+      "manager_email": "valeria.marchetti@azienda.it",
+      "anzianita_aziendale_anni": 7,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": true,
+      "skills": [
+        "architettura_cloud",
+        "sicurezza_infrastrutturale",
+        "disaster_recovery",
+        "networking",
+        "compliance"
+      ],
+      "growth_areas": [
+        "finops",
+        "strategia"
+      ]
+    },
+    {
+      "email": "elena.neri@azienda.it",
+      "nome": "Elena Neri",
+      "ruolo": "System & DevOps Engineer",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "ci_cd",
+        "kubernetes",
+        "cloud_infrastructure",
+        "monitoraggio",
+        "database"
+      ],
+      "growth_areas": [
+        "sicurezza_infrastrutturale",
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "simone.ricci@azienda.it",
+      "nome": "Simone Ricci",
+      "ruolo": "Junior IT & Cloud Specialist",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "helpdesk",
+        "gestione_accessi",
+        "linux",
+        "backup"
+      ],
+      "growth_areas": [
+        "ci_cd",
+        "networking",
+        "cloud_infrastructure"
+      ]
+    },
+    {
+      "email": "silvia.fontana@azienda.it",
+      "nome": "Silvia Fontana",
+      "ruolo": "Backend Tech Lead",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "microservizi",
+        "architettura_software",
+        "api",
+        "database"
+      ],
+      "growth_areas": [
+        "team_management",
+        "cloud_architecture"
+      ]
+    },
+    {
+      "email": "caterina.lombardo@azienda.it",
+      "nome": "Caterina Lombardo",
+      "ruolo": "QA & Automation Lead",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 5,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "testing_automatico",
+        "ci_cd",
+        "performance_testing",
+        "gestione_rilasci"
+      ],
+      "growth_areas": [
+        "devops",
+        "product_management"
+      ]
+    },
+    {
+      "email": "pietro.santoro@azienda.it",
+      "nome": "Pietro Santoro",
+      "ruolo": "Mobile & Product Tech Lead",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "mobile_ios",
+        "mobile_android",
+        "flutter",
+        "api",
+        "ux_ui"
+      ],
+      "growth_areas": [
+        "strategia_prodotto"
+      ]
+    },
+    {
+      "email": "serena.testa@azienda.it",
+      "nome": "Serena Testa",
+      "ruolo": "Embedded & Firmware Lead",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "firmware",
+        "embedded",
+        "rtos",
+        "c_cpp",
+        "protocolli_iot"
+      ],
+      "growth_areas": [
+        "architettura_hw",
+        "team_management"
+      ]
+    },
+    {
+      "email": "valentina.fabbri@azienda.it",
+      "nome": "Valentina Fabbri",
+      "ruolo": "PCB & Hardware QA Lead",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "pcb_design",
+        "cad_elettronico",
+        "certificazioni_hw",
+        "testing_hw",
+        "emc_compliance"
+      ],
+      "growth_areas": [
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "francesco.desantis@azienda.it",
+      "nome": "Francesco De Santis",
+      "ruolo": "Cloud & DevOps Lead",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 5,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "architettura_cloud",
+        "kubernetes",
+        "terraform",
+        "ci_cd",
+        "finops"
+      ],
+      "growth_areas": [
+        "strategia_it"
+      ]
+    },
+    {
+      "email": "pietro.messina@azienda.it",
+      "nome": "Pietro Messina",
+      "ruolo": "Security & Infrastructure Lead",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Lead",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "cybersecurity",
+        "sicurezza_infrastrutturale",
+        "networking",
+        "compliance",
+        "incident_response"
+      ],
+      "growth_areas": [
+        "governance_it"
+      ]
+    },
+    {
+      "email": "veronica.monti@azienda.it",
+      "nome": "Veronica Monti",
+      "ruolo": "Frontend Developer",
+      "team": "team software",
+      "manager_email": "pietro.santoro@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "react",
+        "ux_ui",
+        "css",
+        "testing"
+      ],
+      "growth_areas": [
+        "cloud_native"
+      ]
+    },
+    {
+      "email": "michele.mariani@azienda.it",
+      "nome": "Michele Mariani",
+      "ruolo": "Full-Stack Developer",
+      "team": "team software",
+      "manager_email": "sara.galli@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "testing_automatico",
+        "backend",
+        "api"
+      ],
+      "growth_areas": [
+        "team_management",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "anna.fontana@azienda.it",
+      "nome": "Anna Fontana",
+      "ruolo": "Senior Mobile Developer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "ux_ui",
+        "flutter",
+        "api"
+      ],
+      "growth_areas": [
+        "team_management",
+        "sicurezza_applicativa",
+        "microservizi"
+      ]
+    },
+    {
+      "email": "antonio.desantis@azienda.it",
+      "nome": "Antonio De Santis",
+      "ruolo": "Senior Frontend Developer",
+      "team": "team software",
+      "manager_email": "sara.galli@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "design_system",
+        "typescript",
+        "react"
+      ],
+      "growth_areas": [
+        "team_management",
+        "cloud_native",
+        "user_research"
+      ]
+    },
+    {
+      "email": "noemi.morelli@azienda.it",
+      "nome": "Noemi Morelli",
+      "ruolo": "Senior Full-Stack Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "testing_automatico",
+        "frontend",
+        "database",
+        "api"
+      ],
+      "growth_areas": [
+        "performance_tuning",
+        "team_management"
+      ]
+    },
+    {
+      "email": "pietro.benedetti@azienda.it",
+      "nome": "Pietro Benedetti",
+      "ruolo": "Junior Backend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "documentazione_tecnica",
+        "sql",
+        "backend",
+        "bug_fixing"
+      ],
+      "growth_areas": [
+        "team_management",
+        "performance_tuning",
+        "devops"
+      ]
+    },
+    {
+      "email": "nicolo.vitale@azienda.it",
+      "nome": "Nicolo Vitale",
+      "ruolo": "Mobile Developer",
+      "team": "team software",
+      "manager_email": "sara.galli@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "bug_fixing",
+        "mobile_android"
+      ],
+      "growth_areas": [
+        "user_research",
+        "cloud_native",
+        "microservizi"
+      ]
+    },
+    {
+      "email": "edoardo.grassi@azienda.it",
+      "nome": "Edoardo Grassi",
+      "ruolo": "Mobile Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "mobile_android",
+        "api",
+        "mobile_ios"
+      ],
+      "growth_areas": [
+        "user_research",
+        "sicurezza_applicativa",
+        "architettura_software"
+      ]
+    },
+    {
+      "email": "emma.sala@azienda.it",
+      "nome": "Emma Sala",
+      "ruolo": "QA Engineer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "testing_automatico",
+        "documentazione_tecnica",
+        "testing"
+      ],
+      "growth_areas": [
+        "team_management",
+        "microservizi",
+        "cloud_native"
+      ]
+    },
+    {
+      "email": "lorenzo.mazza@azienda.it",
+      "nome": "Lorenzo Mazza",
+      "ruolo": "Senior Mobile Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 5,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "mobile_android",
+        "mobile_ios",
+        "flutter",
+        "ux_ui",
+        "api"
+      ],
+      "growth_areas": [
+        "team_management"
+      ]
+    },
+    {
+      "email": "lorenzo.sanna@azienda.it",
+      "nome": "Lorenzo Sanna",
+      "ruolo": "QA Engineer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "documentazione_tecnica",
+        "testing",
+        "testing_automatico"
+      ],
+      "growth_areas": [
+        "architettura_software"
+      ]
+    },
+    {
+      "email": "edoardo.mazza@azienda.it",
+      "nome": "Edoardo Mazza",
+      "ruolo": "Backend Developer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "bug_fixing",
+        "api",
+        "backend"
+      ],
+      "growth_areas": [
+        "devops",
+        "sicurezza_applicativa",
+        "microservizi"
+      ]
+    },
+    {
+      "email": "alice.longo@azienda.it",
+      "nome": "Alice Longo",
+      "ruolo": "QA Engineer",
+      "team": "team software",
+      "manager_email": "pietro.santoro@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing",
+        "testing_automatico",
+        "documentazione_tecnica",
+        "qa"
+      ],
+      "growth_areas": [
+        "team_management",
+        "user_research",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "pietro.gallo@azienda.it",
+      "nome": "Pietro Gallo",
+      "ruolo": "Senior Frontend Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "accessibilita",
+        "react",
+        "typescript"
+      ],
+      "growth_areas": [
+        "architettura_software"
+      ]
+    },
+    {
+      "email": "alessio.caputo@azienda.it",
+      "nome": "Alessio Caputo",
+      "ruolo": "Junior Backend Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "sql",
+        "documentazione_tecnica",
+        "bug_fixing"
+      ],
+      "growth_areas": [
+        "devops"
+      ]
+    },
+    {
+      "email": "giovanni.carbone@azienda.it",
+      "nome": "Giovanni Carbone",
+      "ruolo": "Junior QA Tester",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing",
+        "qa",
+        "bug_tracking",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "api",
+        "devops"
+      ]
+    },
+    {
+      "email": "serena.monti@azienda.it",
+      "nome": "Serena Monti",
+      "ruolo": "Junior Backend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "documentazione_tecnica",
+        "bug_fixing",
+        "sql"
+      ],
+      "growth_areas": [
+        "performance_tuning"
+      ]
+    },
+    {
+      "email": "beatrice.santoro@azienda.it",
+      "nome": "Beatrice Santoro",
+      "ruolo": "Senior QA Automation Engineer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "ci_cd",
+        "qa",
+        "testing_automatico"
+      ],
+      "growth_areas": [
+        "user_research"
+      ]
+    },
+    {
+      "email": "ilaria.deluca@azienda.it",
+      "nome": "Ilaria De Luca",
+      "ruolo": "Senior Backend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 7,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "java",
+        "database"
+      ],
+      "growth_areas": [
+        "devops",
+        "microservizi"
+      ]
+    },
+    {
+      "email": "sofia.romano@azienda.it",
+      "nome": "Sofia Romano",
+      "ruolo": "Senior Frontend Developer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "design_system",
+        "typescript",
+        "react",
+        "accessibilita"
+      ],
+      "growth_areas": [
+        "performance_tuning"
+      ]
+    },
+    {
+      "email": "valentina.testa@azienda.it",
+      "nome": "Valentina Testa",
+      "ruolo": "Senior Backend Developer",
+      "team": "team software",
+      "manager_email": "pietro.santoro@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "java",
+        "microservizi",
+        "backend"
+      ],
+      "growth_areas": [
+        "devops"
+      ]
+    },
+    {
+      "email": "gabriele.messina@azienda.it",
+      "nome": "Gabriele Messina",
+      "ruolo": "Frontend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "testing",
+        "css"
+      ],
+      "growth_areas": [
+        "api"
+      ]
+    },
+    {
+      "email": "valentina.sanna@azienda.it",
+      "nome": "Valentina Sanna",
+      "ruolo": "Frontend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "ux_ui",
+        "css",
+        "react",
+        "testing"
+      ],
+      "growth_areas": [
+        "team_management"
+      ]
+    },
+    {
+      "email": "giacomo.cattaneo@azienda.it",
+      "nome": "Giacomo Cattaneo",
+      "ruolo": "Mobile Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "mobile_ios",
+        "bug_fixing",
+        "mobile_android"
+      ],
+      "growth_areas": [
+        "microservizi",
+        "architettura_software",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "giacomo.parisi@azienda.it",
+      "nome": "Giacomo Parisi",
+      "ruolo": "Full-Stack Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "backend",
+        "frontend"
+      ],
+      "growth_areas": [
+        "sicurezza_applicativa",
+        "devops"
+      ]
+    },
+    {
+      "email": "marta.benedetti@azienda.it",
+      "nome": "Marta Benedetti",
+      "ruolo": "Backend Developer",
+      "team": "team software",
+      "manager_email": "pietro.santoro@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "api",
+        "sql",
+        "bug_fixing"
+      ],
+      "growth_areas": [
+        "cloud_native"
+      ]
+    },
+    {
+      "email": "emanuele.silvestri@azienda.it",
+      "nome": "Emanuele Silvestri",
+      "ruolo": "QA Engineer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_automatico",
+        "documentazione_tecnica",
+        "testing"
+      ],
+      "growth_areas": [
+        "architettura_software",
+        "microservizi"
+      ]
+    },
+    {
+      "email": "alessio.romano@azienda.it",
+      "nome": "Alessio Romano",
+      "ruolo": "Full-Stack Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "frontend",
+        "backend"
+      ],
+      "growth_areas": [
+        "user_research",
+        "sicurezza_applicativa",
+        "architettura_software"
+      ]
+    },
+    {
+      "email": "anna.greco@azienda.it",
+      "nome": "Anna Greco",
+      "ruolo": "Senior Frontend Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "accessibilita",
+        "react",
+        "design_system",
+        "frontend",
+        "typescript"
+      ],
+      "growth_areas": [
+        "team_management",
+        "architettura_software"
+      ]
+    },
+    {
+      "email": "marta.barbieri@azienda.it",
+      "nome": "Marta Barbieri",
+      "ruolo": "Senior Frontend Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "design_system",
+        "react",
+        "frontend",
+        "typescript",
+        "accessibilita"
+      ],
+      "growth_areas": [
+        "architettura_software",
+        "cloud_native"
+      ]
+    },
+    {
+      "email": "michele.rinaldi@azienda.it",
+      "nome": "Michele Rinaldi",
+      "ruolo": "Frontend Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "frontend",
+        "ux_ui",
+        "testing",
+        "css"
+      ],
+      "growth_areas": [
+        "team_management",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "marta.ferrara@azienda.it",
+      "nome": "Marta Ferrara",
+      "ruolo": "Senior Backend Developer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "microservizi",
+        "backend",
+        "java",
+        "api"
+      ],
+      "growth_areas": [
+        "team_management",
+        "sicurezza_applicativa",
+        "devops"
+      ]
+    },
+    {
+      "email": "daniele.caruso@azienda.it",
+      "nome": "Daniele Caruso",
+      "ruolo": "Senior Backend Developer",
+      "team": "team software",
+      "manager_email": "pietro.santoro@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "java",
+        "database",
+        "api"
+      ],
+      "growth_areas": [
+        "team_management",
+        "performance_tuning",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "federica.ferrara@azienda.it",
+      "nome": "Federica Ferrara",
+      "ruolo": "Senior Mobile Developer",
+      "team": "team software",
+      "manager_email": "silvia.fontana@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "api",
+        "mobile_ios",
+        "flutter"
+      ],
+      "growth_areas": [
+        "performance_tuning",
+        "cloud_native",
+        "devops"
+      ]
+    },
+    {
+      "email": "elisa.deangelis@azienda.it",
+      "nome": "Elisa De Angelis",
+      "ruolo": "Junior Software Developer",
+      "team": "team software",
+      "manager_email": "marco.rossi@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing",
+        "documentazione_tecnica",
+        "backend",
+        "frontend"
+      ],
+      "growth_areas": [
+        "api",
+        "sicurezza_applicativa"
+      ]
+    },
+    {
+      "email": "marta.conte@azienda.it",
+      "nome": "Marta Conte",
+      "ruolo": "Senior Mobile Developer",
+      "team": "team software",
+      "manager_email": "sara.galli@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "ux_ui",
+        "flutter",
+        "mobile_android",
+        "mobile_ios",
+        "api"
+      ],
+      "growth_areas": [
+        "performance_tuning",
+        "devops"
+      ]
+    },
+    {
+      "email": "emma.bianco@azienda.it",
+      "nome": "Emma Bianco",
+      "ruolo": "Junior Software Developer",
+      "team": "team software",
+      "manager_email": "caterina.lombardo@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backend",
+        "testing",
+        "documentazione_tecnica",
+        "frontend"
+      ],
+      "growth_areas": [
+        "microservizi",
+        "sicurezza_applicativa",
+        "user_research"
+      ]
+    },
+    {
+      "email": "serena.coppola@azienda.it",
+      "nome": "Serena Coppola",
+      "ruolo": "Senior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "cad_elettronico",
+        "pcb_design",
+        "certificazioni_hw"
+      ],
+      "growth_areas": [
+        "rtos"
+      ]
+    },
+    {
+      "email": "emma.ferri@azienda.it",
+      "nome": "Emma Ferri",
+      "ruolo": "Junior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "assemblaggio_prototipi",
+        "testing_hw",
+        "documentazione_tecnica",
+        "pcb_design"
+      ],
+      "growth_areas": [
+        "sicurezza_iot",
+        "emc_compliance"
+      ]
+    },
+    {
+      "email": "alice.leone@azienda.it",
+      "nome": "Alice Leone",
+      "ruolo": "Junior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "documentazione_tecnica",
+        "pcb_design",
+        "testing_hw",
+        "assemblaggio_prototipi"
+      ],
+      "growth_areas": [
+        "sicurezza_iot",
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "elisa.benedetti@azienda.it",
+      "nome": "Elisa Benedetti",
+      "ruolo": "Junior Firmware Developer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "documentazione_tecnica",
+        "debugging_hw",
+        "firmware",
+        "c_cpp"
+      ],
+      "growth_areas": [
+        "emc_compliance",
+        "pcb_design",
+        "rtos"
+      ]
+    },
+    {
+      "email": "silvia.lombardo@azienda.it",
+      "nome": "Silvia Lombardo",
+      "ruolo": "Junior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "assemblaggio_prototipi",
+        "documentazione_tecnica",
+        "testing_hw",
+        "pcb_design"
+      ],
+      "growth_areas": [
+        "certificazioni_hw",
+        "sicurezza_iot",
+        "emc_compliance"
+      ]
+    },
+    {
+      "email": "edoardo.santoro@azienda.it",
+      "nome": "Edoardo Santoro",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "documentazione_tecnica",
+        "certificazioni_hw",
+        "testing_hw"
+      ],
+      "growth_areas": [
+        "sicurezza_iot",
+        "architettura_embedded",
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "gabriele.longo@azienda.it",
+      "nome": "Gabriele Longo",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_hw",
+        "certificazioni_hw",
+        "qa",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "pcb_design"
+      ]
+    },
+    {
+      "email": "ginevra.deluca@azienda.it",
+      "nome": "Ginevra De Luca",
+      "ruolo": "Junior Firmware Developer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "firmware",
+        "documentazione_tecnica",
+        "c_cpp",
+        "debugging_hw"
+      ],
+      "growth_areas": [
+        "pcb_design",
+        "architettura_embedded"
+      ]
+    },
+    {
+      "email": "serena.giuliani@azienda.it",
+      "nome": "Serena Giuliani",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "documentazione_tecnica",
+        "testing_hw",
+        "certificazioni_hw"
+      ],
+      "growth_areas": [
+        "rtos",
+        "emc_compliance"
+      ]
+    },
+    {
+      "email": "ilaria.fabbri@azienda.it",
+      "nome": "Ilaria Fabbri",
+      "ruolo": "Senior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "cad_elettronico",
+        "pcb_design",
+        "sensoristica",
+        "prototipazione"
+      ],
+      "growth_areas": [
+        "sicurezza_iot",
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "michele.grassi@azienda.it",
+      "nome": "Michele Grassi",
+      "ruolo": "Firmware Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "firmware",
+        "embedded",
+        "debugging_hw",
+        "c_cpp"
+      ],
+      "growth_areas": [
+        "sicurezza_iot",
+        "rtos"
+      ]
+    },
+    {
+      "email": "alessio.grassi@azienda.it",
+      "nome": "Alessio Grassi",
+      "ruolo": "Junior Hardware Test Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "testing_hw",
+        "assemblaggio_prototipi"
+      ],
+      "growth_areas": [
+        "sicurezza_iot"
+      ]
+    },
+    {
+      "email": "federica.longo@azienda.it",
+      "nome": "Federica Longo",
+      "ruolo": "Junior Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_hw",
+        "assemblaggio_prototipi",
+        "pcb_design",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "certificazioni_hw"
+      ]
+    },
+    {
+      "email": "giuseppe.pellegrini@azienda.it",
+      "nome": "Giuseppe Pellegrini",
+      "ruolo": "Hardware Engineer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "debugging_hw",
+        "sensoristica",
+        "pcb_design",
+        "prototipazione"
+      ],
+      "growth_areas": [
+        "emc_compliance",
+        "sicurezza_iot",
+        "architettura_embedded"
+      ]
+    },
+    {
+      "email": "serena.sanna@azienda.it",
+      "nome": "Serena Sanna",
+      "ruolo": "Junior Firmware Developer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "c_cpp",
+        "firmware",
+        "debugging_hw",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "vittoria.barbieri@azienda.it",
+      "nome": "Vittoria Barbieri",
+      "ruolo": "Senior Firmware Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 7,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "rtos",
+        "embedded",
+        "protocolli_iot",
+        "firmware"
+      ],
+      "growth_areas": [
+        "supply_chain",
+        "certificazioni_hw",
+        "pcb_design"
+      ]
+    },
+    {
+      "email": "valentina.lombardo@azienda.it",
+      "nome": "Valentina Lombardo",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_hw",
+        "qa",
+        "certificazioni_hw"
+      ],
+      "growth_areas": [
+        "supply_chain"
+      ]
+    },
+    {
+      "email": "sofia.marchetti@azienda.it",
+      "nome": "Sofia Marchetti",
+      "ruolo": "Junior Hardware Test Engineer",
+      "team": "team hardware",
+      "manager_email": "luca.verdi@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "assemblaggio_prototipi",
+        "testing_hw",
+        "qa",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "emc_compliance",
+        "certificazioni_hw"
+      ]
+    },
+    {
+      "email": "noemi.lombardo@azienda.it",
+      "nome": "Noemi Lombardo",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "qa",
+        "testing_hw",
+        "certificazioni_hw"
+      ],
+      "growth_areas": [
+        "supply_chain",
+        "emc_compliance",
+        "sicurezza_iot"
+      ]
+    },
+    {
+      "email": "veronica.valentini@azienda.it",
+      "nome": "Veronica Valentini",
+      "ruolo": "Hardware Validation Engineer",
+      "team": "team hardware",
+      "manager_email": "serena.testa@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "testing_hw",
+        "qa",
+        "documentazione_tecnica"
+      ],
+      "growth_areas": [
+        "rtos",
+        "sicurezza_iot"
+      ]
+    },
+    {
+      "email": "enrico.grasso@azienda.it",
+      "nome": "Enrico Grasso",
+      "ruolo": "Junior Hardware Test Engineer",
+      "team": "team hardware",
+      "manager_email": "valentina.fabbri@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "assemblaggio_prototipi",
+        "qa",
+        "documentazione_tecnica",
+        "testing_hw"
+      ],
+      "growth_areas": [
+        "pcb_design",
+        "certificazioni_hw",
+        "rtos"
+      ]
+    },
+    {
+      "email": "arianna.ferrara@azienda.it",
+      "nome": "Arianna Ferrara",
+      "ruolo": "Senior Cloud Architect",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 6,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "finops",
+        "kubernetes",
+        "architettura_cloud"
+      ],
+      "growth_areas": [
+        "networking"
+      ]
+    },
+    {
+      "email": "camilla.sanna@azienda.it",
+      "nome": "Camilla Sanna",
+      "ruolo": "Junior IT & Cloud Specialist",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "cloud_infrastructure",
+        "gestione_accessi",
+        "helpdesk"
+      ],
+      "growth_areas": [
+        "cybersecurity",
+        "compliance"
+      ]
+    },
+    {
+      "email": "giacomo.lombardo@azienda.it",
+      "nome": "Giacomo Lombardo",
+      "ruolo": "Junior IT & Cloud Specialist",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 1,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "networking",
+        "gestione_accessi",
+        "helpdesk"
+      ],
+      "growth_areas": [
+        "compliance",
+        "disaster_recovery",
+        "architettura_cloud"
+      ]
+    },
+    {
+      "email": "giorgia.grasso@azienda.it",
+      "nome": "Giorgia Grasso",
+      "ruolo": "Security Analyst",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "monitoraggio",
+        "cybersecurity",
+        "compliance",
+        "incident_response"
+      ],
+      "growth_areas": [
+        "architettura_cloud"
+      ]
+    },
+    {
+      "email": "federica.rizzi@azienda.it",
+      "nome": "Federica Rizzi",
+      "ruolo": "DevOps Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "docker",
+        "ci_cd",
+        "monitoraggio"
+      ],
+      "growth_areas": [
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "alessia.sanna@azienda.it",
+      "nome": "Alessia Sanna",
+      "ruolo": "Cloud Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "database",
+        "terraform",
+        "networking"
+      ],
+      "growth_areas": [
+        "finops",
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "elisa.testa@azienda.it",
+      "nome": "Elisa Testa",
+      "ruolo": "DevOps Engineer",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "docker",
+        "monitoraggio",
+        "ci_cd"
+      ],
+      "growth_areas": [
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "samuele.romano@azienda.it",
+      "nome": "Samuele Romano",
+      "ruolo": "DevOps Engineer",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "monitoraggio",
+        "docker",
+        "ci_cd",
+        "cloud_infrastructure"
+      ],
+      "growth_areas": [
+        "finops",
+        "terraform"
+      ]
+    },
+    {
+      "email": "daniele.carbone@azienda.it",
+      "nome": "Daniele Carbone",
+      "ruolo": "Senior DevOps Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "kubernetes",
+        "monitoraggio",
+        "ci_cd",
+        "docker",
+        "automazione"
+      ],
+      "growth_areas": [
+        "compliance",
+        "cybersecurity"
+      ]
+    },
+    {
+      "email": "giuseppe.sanna@azienda.it",
+      "nome": "Giuseppe Sanna",
+      "ruolo": "Senior DevOps Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "docker",
+        "monitoraggio",
+        "ci_cd",
+        "kubernetes",
+        "automazione"
+      ],
+      "growth_areas": [
+        "finops",
+        "disaster_recovery",
+        "terraform"
+      ]
+    },
+    {
+      "email": "edoardo.sanna@azienda.it",
+      "nome": "Edoardo Sanna",
+      "ruolo": "Cloud Engineer",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "networking",
+        "database",
+        "terraform",
+        "cloud_infrastructure"
+      ],
+      "growth_areas": [
+        "kubernetes"
+      ]
+    },
+    {
+      "email": "serena.benedetti@azienda.it",
+      "nome": "Serena Benedetti",
+      "ruolo": "DevOps Engineer",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "ci_cd",
+        "monitoraggio",
+        "docker",
+        "cloud_infrastructure"
+      ],
+      "growth_areas": [
+        "cybersecurity",
+        "finops"
+      ]
+    },
+    {
+      "email": "edoardo.grasso@azienda.it",
+      "nome": "Edoardo Grasso",
+      "ruolo": "Junior System Administrator",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 2,
+      "seniority": "Junior",
+      "decision_autonomy": "bassa",
+      "is_key_stakeholder": false,
+      "skills": [
+        "gestione_accessi",
+        "helpdesk",
+        "linux",
+        "backup"
+      ],
+      "growth_areas": [
+        "networking",
+        "terraform"
+      ]
+    },
+    {
+      "email": "francesca.greco@azienda.it",
+      "nome": "Francesca Greco",
+      "ruolo": "Cloud Engineer",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "networking",
+        "terraform",
+        "database"
+      ],
+      "growth_areas": [
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "ginevra.bruno@azienda.it",
+      "nome": "Ginevra Bruno",
+      "ruolo": "Senior Database Administrator",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "backup",
+        "disaster_recovery",
+        "sql",
+        "performance_tuning",
+        "database"
+      ],
+      "growth_areas": [
+        "cybersecurity"
+      ]
+    },
+    {
+      "email": "beatrice.amato@azienda.it",
+      "nome": "Beatrice Amato",
+      "ruolo": "Senior Cybersecurity Engineer",
+      "team": "team system",
+      "manager_email": "francesco.desantis@azienda.it",
+      "anzianita_aziendale_anni": 8,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "cybersecurity",
+        "sicurezza_infrastrutturale",
+        "compliance"
+      ],
+      "growth_areas": [
+        "disaster_recovery"
+      ]
+    },
+    {
+      "email": "edoardo.leone@azienda.it",
+      "nome": "Edoardo Leone",
+      "ruolo": "Senior Database Administrator",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 7,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "database",
+        "performance_tuning",
+        "disaster_recovery",
+        "backup"
+      ],
+      "growth_areas": [
+        "networking",
+        "cybersecurity",
+        "finops"
+      ]
+    },
+    {
+      "email": "emma.gatti@azienda.it",
+      "nome": "Emma Gatti",
+      "ruolo": "System Administrator",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "networking",
+        "gestione_accessi",
+        "linux",
+        "backup"
+      ],
+      "growth_areas": [
+        "cybersecurity",
+        "finops"
+      ]
+    },
+    {
+      "email": "arianna.coppola@azienda.it",
+      "nome": "Arianna Coppola",
+      "ruolo": "Senior Cybersecurity Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 7,
+      "seniority": "Senior",
+      "decision_autonomy": "alta",
+      "is_key_stakeholder": false,
+      "skills": [
+        "penetration_testing",
+        "sicurezza_infrastrutturale",
+        "incident_response",
+        "compliance",
+        "cybersecurity"
+      ],
+      "growth_areas": [
+        "terraform",
+        "networking"
+      ]
+    },
+    {
+      "email": "diego.amato@azienda.it",
+      "nome": "Diego Amato",
+      "ruolo": "Security Analyst",
+      "team": "team system",
+      "manager_email": "andrea.moretti@azienda.it",
+      "anzianita_aziendale_anni": 4,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "compliance",
+        "cybersecurity",
+        "monitoraggio",
+        "incident_response"
+      ],
+      "growth_areas": [
+        "networking",
+        "finops"
+      ]
+    },
+    {
+      "email": "marta.carbone@azienda.it",
+      "nome": "Marta Carbone",
+      "ruolo": "Cloud Engineer",
+      "team": "team system",
+      "manager_email": "pietro.messina@azienda.it",
+      "anzianita_aziendale_anni": 3,
+      "seniority": "Mid",
+      "decision_autonomy": "media",
+      "is_key_stakeholder": false,
+      "skills": [
+        "database",
+        "cloud_infrastructure",
+        "networking"
+      ],
+      "growth_areas": [
+        "finops",
+        "cybersecurity",
+        "architettura_cloud"
+      ]
+    }
+  ],
+  "external_clients": [
+    {
+      "email": "r.marino@fintechitalia.it",
+      "nome": "Roberto Marino",
+      "azienda": "FinTech Italia SpA",
+      "ruolo": "CTO",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Piattaforma Pagamenti Core"
+    },
+    {
+      "email": "l.fontana@logismart.it",
+      "nome": "Laura Fontana",
+      "azienda": "LogiSmart Srl",
+      "ruolo": "Operations Director",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Sensoristica IoT Magazzini"
+    },
+    {
+      "email": "p.deluca@retailnow.it",
+      "nome": "Paolo De Luca",
+      "azienda": "RetailNow Srl",
+      "ruolo": "Project Manager",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Portale E-commerce B2B"
+    },
+    {
+      "email": "m.ferretti@medtechgroup.it",
+      "nome": "Massimo Ferretti",
+      "azienda": "MedTech Group SpA",
+      "ruolo": "VP Engineering",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Dispositivi Diagnostici Connessi"
+    },
+    {
+      "email": "c.bellini@energysync.eu",
+      "nome": "Cristina Bellini",
+      "azienda": "EnergySync Europe",
+      "ruolo": "Head of Digital Transformation",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Smart Grid Telemetry"
+    },
+    {
+      "email": "g.costa@autonova.it",
+      "nome": "Gianluca Costa",
+      "azienda": "AutoNova Componenti SpA",
+      "ruolo": "R&D Director",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Centraline Embedded V2"
+    },
+    {
+      "email": "f.mancini@bancomobile.it",
+      "nome": "Federica Mancini",
+      "azienda": "BancoMobile SpA",
+      "ruolo": "Chief Information Security Officer",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Audit & Cloud Migration"
+    },
+    {
+      "email": "a.rinaldi@agritechitalia.it",
+      "nome": "Alberto Rinaldi",
+      "azienda": "AgriTech Italia Srl",
+      "ruolo": "Product Owner",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Sensori Umidità Campo Aperto"
+    },
+    {
+      "email": "s.pellegrini@fashioncloud.it",
+      "nome": "Silvia Pellegrini",
+      "azienda": "FashionCloud Srl",
+      "ruolo": "IT Manager",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Integrazione ERP e Magazzino"
+    },
+    {
+      "email": "d.gatti@transporteasy.eu",
+      "nome": "Daniele Gatti",
+      "azienda": "TransportEasy Logistics",
+      "ruolo": "Fleet Tech Manager",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Tracking Flotta Real-Time"
+    },
+    {
+      "email": "e.bruno@healthplus.it",
+      "nome": "Emanuela Bruno",
+      "azienda": "HealthPlus Cliniche",
+      "ruolo": "Compliance & Privacy Officer",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "Cartella Clinica Cloud"
+    },
+    {
+      "email": "n.serra@buildsmart.it",
+      "nome": "Nicola Serra",
+      "azienda": "BuildSmart Costruzioni",
+      "ruolo": "Technical Coordinator",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Monitoraggio Strutturale IoT"
+    },
+    {
+      "email": "v.martini@insuretech.it",
+      "nome": "Vincenzo Martini",
+      "azienda": "InsureTech Italia",
+      "ruolo": "Head of IT Architecture",
+      "is_key_stakeholder": true,
+      "progetto_riferimento": "API Gateway Polizze"
+    },
+    {
+      "email": "r.cattaneo@foodchain.it",
+      "nome": "Roberta Cattaneo",
+      "azienda": "FoodChain Distribuzione",
+      "ruolo": "Supply Chain Specialist",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Tracciabilità Catena del Freddo"
+    },
+    {
+      "email": "t.morelli@smartcityhub.it",
+      "nome": "Tommaso Morelli",
+      "azienda": "SmartCity Hub Consorzio",
+      "ruolo": "Program Manager",
+      "is_key_stakeholder": false,
+      "progetto_riferimento": "Illuminazione Pubblica Intelligente"
+    }
+  ]
+}
