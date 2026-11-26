@@ -29,6 +29,12 @@ function workday(offset: number): number {
   return offset;
 }
 
+/** Offset (giorni da oggi) del giorno n della settimana corrente: 0 = lunedì … 4 = venerdì */
+function thisWeek(n: number): number {
+  const wd = new Date(`${day(0)}T12:00:00Z`).getUTCDay(); // 0 = domenica
+  return n - ((wd + 6) % 7);
+}
+
 function ev(id: string, title: string, dayOffset: number, from: string, to: string,
             attendees: string[], extra: Partial<CalendarEvent> = {}): CalendarEvent {
   const tz = config.timezone;
@@ -76,7 +82,7 @@ function initialEvents(): CalendarEvent[] {
     ev("mock-1to1-past", "1:1 con Giulia", -7, "16:00", "16:30", [TEAM[0]]),
     ev("mock-retro-1", "Retrospettiva", -6, "16:45", "17:30", TEAM),
     ev("mock-commerciale-1", "Allineamento commerciale", -4, "11:00", "12:30", ["stefano.colombo@azienda.it"]),
-    ev("mock-coffee-1", "Caffè con Davide", -2, "10:30", "10:50", [TEAM[1]]),
+    ev("mock-coffee-1", "Caffè con Davide", -2, "10:30", "11:05", [TEAM[1]]),
     // questa settimana e le prossime due
     ev("mock-lunch-cto", "Pranzo con Valeria (CTO)", 0, "12:30", "13:30", ["valeria.marchetti@azienda.it"]),
     ev("mock-codereview", "Code review modulo pagamenti", 1, "16:45", "17:45", [TEAM[1], "ilaria.deluca@azienda.it"]),
@@ -85,13 +91,37 @@ function initialEvents(): CalendarEvent[] {
     ev("mock-1to1-davide", "1:1 con Davide", 4, "17:30", "18:00", [TEAM[1]]),
     ev("mock-security", "Security review infrastruttura", 6, "10:00", "11:00", ["pietro.messina@azienda.it", "andrea.moretti@azienda.it"]),
     ev("mock-1to1-2", "1:1 con Giulia", 7, "16:00", "16:30", [TEAM[0]]),
-    ev("mock-coffee-2", "Caffè con Davide", 8, "10:30", "10:50", [TEAM[1]]),
+    ev("mock-coffee-2", "Caffè con Davide", 8, "10:30", "11:05", [TEAM[1]]),
     ev("mock-retro-2", "Retrospettiva", 9, "16:45", "17:30", TEAM),
     ev("mock-fintech-demo", "Demo cliente FinTech Italia", 10, "14:00", "15:00", ["r.marino@fintechitalia.it", "alessandro.conti@azienda.it"]),
     ev("mock-planning-2", "Sprint planning", 11, "10:00", "12:00", TEAM),
     ev("mock-qa", "Allineamento QA release", 12, "14:00", "14:45", ["caterina.lombardo@azienda.it", "emma.sala@azienda.it"]),
     ev("mock-status-3", "Weekly status report", 13, "15:00", "16:00", TEAM),
     ev("mock-1to1-3", "1:1 con Giulia", 14, "16:00", "16:30", [TEAM[0]]),
+  );
+
+  // Settimana corrente più piena (lunedì-venerdì della settimana in cui parte il backend),
+  // così la vista settimanale è ricca qualunque sia il giorno della demo.
+  list.push(
+    // lunedì
+    ev("mock-week-kickoff", "Kick-off settimanale", thisWeek(0), "09:45", "10:15", TEAM),
+    ev("mock-week-colloquio", "Colloquio candidato backend", thisWeek(0), "14:00", "15:00", ["silvia.fontana@azienda.it"]),
+    ev("mock-week-hw", "Allineamento con team Hardware", thisWeek(0), "16:00", "17:00", ["luca.verdi@azienda.it", "serena.testa@azienda.it"]),
+    // martedì
+    ev("mock-week-mobile", "Review PR app mobile", thisWeek(1), "11:30", "12:30", ["pietro.santoro@azienda.it", "anna.fontana@azienda.it"]),
+    ev("mock-week-cloud", "Call fornitore cloud", thisWeek(1), "14:30", "15:30", ["francesco.desantis@azienda.it", "account@cloudprovider.example"]),
+    ev("mock-week-1to1-sara", "1:1 con Sara", thisWeek(1), "17:00", "17:30", [TEAM[2]]),
+    // mercoledì
+    ev("mock-week-devops", "Allineamento DevOps", thisWeek(2), "10:00", "11:00", ["andrea.moretti@azienda.it", "elena.neri@azienda.it"]),
+    ev("mock-week-pranzo", "Pranzo di team", thisWeek(2), "12:30", "13:30", TEAM),
+    ev("mock-week-demo-int", "Demo interna nuove funzionalità", thisWeek(2), "16:30", "17:30", ["valeria.marchetti@azienda.it", "pietro.santoro@azienda.it"]),
+    // giovedì
+    ev("mock-week-budget", "Revisione budget Q1", thisWeek(3), "10:00", "11:00", ["stefano.colombo@azienda.it"]),
+    ev("mock-week-security", "Workshop sicurezza applicativa", thisWeek(3), "14:00", "15:15", ["pietro.messina@azienda.it", TEAM[1]]),
+    ev("mock-week-qa", "Sync QA", thisWeek(3), "17:00", "17:30", ["caterina.lombardo@azienda.it"]),
+    // venerdì
+    ev("mock-week-stakeholder", "Demo sprint agli stakeholder", thisWeek(4), "14:00", "15:00", ["alessandro.conti@azienda.it", "valeria.marchetti@azienda.it"]),
+    ev("mock-week-product", "Weekly sync con Product", thisWeek(4), "15:15", "16:00", ["pietro.santoro@azienda.it"]),
   );
   return list;
 }
