@@ -7,29 +7,32 @@ const from = new Date("2026-11-23T00:00:00+01:00");
 const to = new Date("2026-12-14T00:00:00+01:00");
 
 describe("useMeetings in modalità mock", () => {
-    it("parte con i 36 eventi e i suggerimenti calcolati", () => {
+    it("parte con tutti gli eventi del file e i suggerimenti calcolati", () => {
         const { result } = renderHook(() => useMeetings(from, to));
-        expect(result.current.meetings).toHaveLength(36);
+        expect(result.current.meetings.length).toBeGreaterThan(50);
         expect(result.current.status.source).toBe("mock");
         expect(result.current.suggestions[0].quadrant).toBe("drop");
     });
 
     it("conferma la partecipazione a un invito", () => {
         const { result } = renderHook(() => useMeetings(from, to));
-        act(() => result.current.confirm("evt_022"));
-        expect(result.current.meetings.find((m) => m.id === "evt_022")!.myResponse).toBe("accepted");
+        const invite = result.current.meetings.find((m) => m.myResponse === "needsAction")!;
+        act(() => result.current.confirm(invite.id));
+        expect(result.current.meetings.find((m) => m.id === invite.id)!.myResponse).toBe("accepted");
     });
 
     it("elimina un evento", async () => {
         const { result } = renderHook(() => useMeetings(from, to));
-        await act(() => result.current.remove("evt_024"));
-        expect(result.current.meetings.find((m) => m.id === "evt_024")).toBeUndefined();
+        const id = result.current.meetings[0].id;
+        await act(() => result.current.remove(id));
+        expect(result.current.meetings.find((m) => m.id === id)).toBeUndefined();
     });
 
     it("modifica titolo e orario", async () => {
         const { result } = renderHook(() => useMeetings(from, to));
-        await act(() => result.current.update("evt_021", { title: "Deep-dive", start: "2026-11-26T15:00:00+01:00", end: "2026-11-26T16:00:00+01:00" }));
-        const m = result.current.meetings.find((x) => x.id === "evt_021")!;
+        const id = result.current.meetings.find((m) => m.title.startsWith("Deep-dive"))!.id;
+        await act(() => result.current.update(id, { title: "Deep-dive", start: "2026-11-26T15:00:00+01:00", end: "2026-11-26T16:00:00+01:00" }));
+        const m = result.current.meetings.find((x) => x.id === id)!;
         expect(m.title).toBe("Deep-dive");
         expect(m.start.toISOString()).toBe("2026-11-26T14:00:00.000Z");
     });

@@ -105,6 +105,19 @@ Verificate `http://localhost:3001/health`: la risposta deve includere `"ok": tru
 
 Le scritture e le eliminazioni agiscono davvero sul calendario Google autorizzato. Il connettore attualmente imposta `sendUpdates: "none"`, quindi non invia inviti o aggiornamenti ai partecipanti. Per i dettagli sulla configurazione MCP, consultate anche [mcp/README.md](mcp/README.md); per variabili e autenticazione Google, [backend/README.md](backend/README.md).
 
+### Calendario pieno per mostrare la UI
+
+Per far vedere il calendario con settimane piene di meeting invece degli eventi finti:
+
+```powershell
+cd db;      $env:SEED_FILE="../backend/example-data/calendario.json"; npm run reset
+cd backend; # nel .env: MOCK_DATA_FILE=./example-data/calendario.json
+            npm run dev
+```
+
+Lo script della demo qui sotto usa invece gli eventi finti: per tornarci, togliete `MOCK_DATA_FILE`
+e rilanciate `npm run reset` senza `SEED_FILE`.
+
 ## Script della demo
 
 Prima di ogni prova: `cd db && npm run reset`

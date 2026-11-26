@@ -9,6 +9,7 @@
 import { addRating, upsertEventSnapshot } from "./db.ts";
 import type { CalendarEvent } from "../../shared/types.ts";
 import { toZonedIso } from "../../shared/time.ts";
+import { demoRatings, readDemoCalendar } from "../../shared/demoData.ts";
 
 /** Giorno lavorativo n giorni fa, all'ora indicata (ora di Roma ~ UTC+1) */
 function daysAgo(n: number, hour: number, minute = 0): Date {
@@ -60,7 +61,18 @@ const MEETINGS: SeedMeeting[] = [
   { title: "Review architettura", daysAgo: 10, hour: 14, durationMin: 60, attendees: TEAM, rating: 5, effort: 3, note: "Decisioni chiare" },
 ];
 
+/** Con SEED_FILE i voti arrivano dal calendario di esempio del gruppo DB (stessi id del backend con MOCK_DATA_FILE) */
+function seedFromFile(path: string): void {
+  const ratings = demoRatings(readDemoCalendar(path));
+  for (const { event, rating, effort } of ratings) {
+    upsertEventSnapshot(event);
+    addRating({ event_id: event.id, rating, effort });
+  }
+  console.log(`Seed completato da ${path}: ${ratings.length} meeting con rating.`);
+}
+
 export function seed(): void {
+  if (process.env.SEED_FILE) return seedFromFile(process.env.SEED_FILE);
   MEETINGS.forEach((m, i) => {
     const start = daysAgo(m.daysAgo, m.hour);
     const end = new Date(start.getTime() + m.durationMin * 60_000);

@@ -1,5 +1,8 @@
 .side {
-    flex: 0 0 clamp(290px, 24vw, 380px);
+    flex: 0 0 clamp(280px, 22vw, 340px);
+    /* senza questo i titoli lunghi della lista allargano il pannello */
+    min-width: 0;
+    max-width: clamp(280px, 22vw, 340px);
     min-height: 0;
     display: flex;
     flex-direction: column;
@@ -205,11 +208,13 @@
 }
 
 .impactTitle {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 13px;
     font-weight: 600;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 16px;
 }
 
 .impactMeta {
@@ -246,15 +251,13 @@
 .tipHead {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
 }
 
 .tipHead strong {
     font-size: 13px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 16px;
 }
 
 .tipText {
@@ -299,6 +302,7 @@
 @media (max-width: 900px) {
     .side {
         flex: none;
+        max-width: none;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: start;
@@ -325,5 +329,20 @@
 @media (max-width: 600px) {
     .side {
         grid-template-columns: 1fr;
+    }
+}
+
+/* schermi bassi (portatile 1280x720): via la frase dei suggerimenti, più spazio all'impact */
+@media (max-height: 780px) and (min-width: 901px) {
+    .tipText {
+        display: none;
+    }
+
+    .tip {
+        padding: 6px 10px;
+    }
+
+    .card {
+        gap: 5px;
     }
 }

@@ -3,6 +3,8 @@ import "dotenv/config";
 export const config = {
   port: Number(process.env.PORT ?? 3001),
   mock: (process.env.MOCK ?? "true").toLowerCase() === "true",
+  /** Solo con MOCK=true: file JSON del gruppo DB da usare al posto degli eventi finti (es. ./example-data/calendario.json) */
+  mockDataFile: process.env.MOCK_DATA_FILE || null,
   timezone: process.env.TIMEZONE ?? "Europe/Rome",
   /** Chi usa il calendario: deve essere nell'organigramma (backend/data/organigramma.json) */
   userEmail: process.env.USER_EMAIL ?? "marco.rossi@azienda.it",

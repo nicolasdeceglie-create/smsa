@@ -7,7 +7,7 @@
     "dev": "tsx watch src/index.ts",
     "start": "tsx src/index.ts",
     "auth": "tsx src/auth.ts",
-    "test": "tsx --test test/backend.test.ts",
+    "test": "tsx --test test/backend.test.ts test/demoData.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
