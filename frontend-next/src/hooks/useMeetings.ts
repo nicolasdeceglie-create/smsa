@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { diffMeetings } from "@/lib/activity";
 import { deleteMeeting, fetchSnapshot, updateMeeting } from "@/lib/api";
 import { fmtDayShort, fmtTime } from "@/lib/dates";
 import { loadMockMeetings } from "@/lib/mock";
@@ -10,37 +11,6 @@ import type { ActivityItem, Meeting, MeetingPatch, SourceStatus, Suggestion } fr
 const SOURCE = process.env.NEXT_PUBLIC_DATA_SOURCE === "api" ? "api" : "mock";
 const POLL_MS = 3000;
 const FLASH_MS = 4000;
-
-/** Confronta due liste e descrive cosa è cambiato (creato, spostato, eliminato) */
-function diff(prev: Meeting[], next: Meeting[], ignore: Set<string>): ActivityItem[] {
-    const before = new Map(prev.map((m) => [m.id, m]));
-    const after = new Map(next.map((m) => [m.id, m]));
-    const items: ActivityItem[] = [];
-    const at = new Date();
-    const item = (m: Meeting, verb: string, detail = ""): ActivityItem => ({
-        id: `${m.id}-${verb}-${at.getTime()}`,
-        meetingId: m.id,
-        at,
-        verb,
-        meetingTitle: m.title,
-        detail,
-    });
-    const when = (m: Meeting) => `${fmtDayShort(m.start)} alle ${fmtTime(m.start)}`;
-    for (const m of next) {
-        const old = before.get(m.id);
-        if (!old) {
-            items.push(item(m, "creato", `per ${when(m)}`));
-        } else if (old.start.getTime() !== m.start.getTime() || old.end.getTime() !== m.end.getTime()) {
-            items.push(item(m, "spostato", `a ${when(m)}`));
-        } else if (old.title !== m.title) {
-            items.push(item(m, "rinominato"));
-        }
-    }
-    for (const m of prev) {
-        if (!after.has(m.id) && !ignore.has(m.id)) items.push(item(m, "eliminato"));
-    }
-    return items;
-}
 
 export function useMeetings(from: Date, to: Date) {
     const [meetings, setMeetings] = useState<Meeting[]>(() => (SOURCE === "mock" ? loadMockMeetings() : []));
@@ -89,7 +59,7 @@ export function useMeetings(from: Date, to: Date) {
             try {
                 const snap = await fetchSnapshot(new Date(fromKey), new Date(toKey));
                 if (!alive) return;
-                if (previous.current) record(diff(previous.current, snap.meetings, deletedByUser.current));
+                if (previous.current) record(diffMeetings(previous.current, snap.meetings, deletedByUser.current));
                 previous.current = snap.meetings;
                 setMeetings(snap.meetings);
                 setApiSuggestions(snap.suggestions);

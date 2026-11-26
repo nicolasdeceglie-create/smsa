@@ -57,7 +57,7 @@ export function EventPopover({ meeting: m, placement, onClose, onDelete, onConfi
     const people =
         m.attendees.length === 0
             ? "Evento personale"
-            : `${m.attendees.length} invitati · ` +
+            : `${m.attendees.length} ${m.attendees.length === 1 ? "invitato" : "invitati"} · ` +
               (pending ? `${accepted} ${accepted === 1 ? "ha" : "hanno"} accettato, manca la tua risposta` : "tutti hanno accettato");
 
     async function run(action: () => Promise<void>) {

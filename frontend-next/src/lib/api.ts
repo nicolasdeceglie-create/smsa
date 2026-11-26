@@ -18,6 +18,9 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     return res.status === 204 ? (undefined as T) : res.json();
 }
 
+/** 1.5 → "1,5", 5 → "5" */
+const num = new Intl.NumberFormat("it-IT", { maximumFractionDigits: 1 }).format;
+
 const qs = (from: Date, to: Date) => `from=${encodeURIComponent(from.toISOString())}&to=${encodeURIComponent(to.toISOString())}`;
 
 function toMeeting(e: CalendarEvent, rating?: RatingWithEvent, prediction?: MeetingPrediction): Meeting {
@@ -54,14 +57,22 @@ export async function fetchSnapshot(from: Date, to: Date): Promise<ApiSnapshot> 
         request<MeetingPrediction[]>(`/predictions?${qs(new Date(), to)}`),
         request<MeetingSummary[]>("/ratings/summary"),
     ]);
-    // ultimo voto per evento
-    const lastRating = new Map<string, RatingWithEvent>();
+    // ultimo voto per evento. Lo cerco per id e, se non c'è, per titolo + inizio:
+    // i voti del seed hanno id "seed-N" mentre il calendario mock usa "mock-*"
+    const byId = new Map<string, RatingWithEvent>();
+    const bySlot = new Map<string, RatingWithEvent>();
+    const slotKey = (title: string, start: string) => `${title.toLowerCase()}|${new Date(start).getTime()}`;
     for (const r of ratings) {
-        const prev = lastRating.get(r.event_id);
-        if (!prev || prev.created_at < r.created_at) lastRating.set(r.event_id, r);
+        const prev = byId.get(r.event_id);
+        if (!prev || prev.created_at < r.created_at) {
+            byId.set(r.event_id, r);
+            bySlot.set(slotKey(r.event_title, r.event_start), r);
+        }
     }
     const byPrediction = new Map(predictions.map((p) => [p.event_id, p]));
-    const meetings = events.map((e) => toMeeting(e, lastRating.get(e.id), byPrediction.get(e.id)));
+    const meetings = events.map((e) =>
+        toMeeting(e, byId.get(e.id) ?? bySlot.get(slotKey(e.title, e.start)), byPrediction.get(e.id))
+    );
 
     const order = ["drop", "shorten", "optimize"] as const;
     const suggestions: Suggestion[] = order.flatMap((q) =>
@@ -72,7 +83,7 @@ export async function fetchSnapshot(from: Date, to: Date): Promise<ApiSnapshot> 
             .map((s) => ({
                 title: s.title,
                 quadrant: q,
-                text: `Utilità ${s.avg_rating.toFixed(1)} · effort ${s.avg_effort.toFixed(1)} su ${s.count} incontri.`,
+                text: `Utilità ${num(s.avg_rating)} · effort ${num(s.avg_effort)} su ${s.count} ${s.count === 1 ? "incontro" : "incontri"}.`,
             }))
     );
     return { meetings, suggestions, backendMock: health.mock };
