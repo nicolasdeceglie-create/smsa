@@ -4,6 +4,8 @@ export const config = {
   port: Number(process.env.PORT ?? 3001),
   mock: (process.env.MOCK ?? "true").toLowerCase() === "true",
   timezone: process.env.TIMEZONE ?? "Europe/Rome",
+  /** Chi usa il calendario: deve essere nell'organigramma (backend/data/organigramma.json) */
+  userEmail: process.env.USER_EMAIL ?? "marco.rossi@azienda.it",
   google: {
     credentialsPath: process.env.GOOGLE_CREDENTIALS_PATH ?? "./credentials.json",
     tokenPath: process.env.GOOGLE_TOKEN_PATH ?? "./token.json",

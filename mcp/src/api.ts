@@ -4,7 +4,8 @@
 //     Per i log usare solo console.error.
 // ============================================================
 import type {
-  CalendarEvent, EventPatch, FreeSlot, MeetingSummary, NewEvent, NewRating, Rating, RatingWithEvent,
+  CalendarEvent, DelegateSuggestion, EventPatch, FreeSlot, MeetingPrediction, MeetingSummary, NewEvent, NewRating,
+  Rating, RatingWithEvent,
 } from "../../shared/types.ts";
 
 const BASE = process.env.BACKEND_URL ?? "http://localhost:3001";
@@ -42,4 +43,13 @@ export const api = {
   rate: (r: NewRating) => call<Rating>("POST", "/ratings", r),
   ratings: () => call<RatingWithEvent[]>("GET", "/ratings"),
   summary: () => call<MeetingSummary[]>("GET", "/ratings/summary"),
+  predictions: (from?: string, to?: string) => {
+    const q = new URLSearchParams();
+    if (from) q.set("from", from);
+    if (to) q.set("to", to);
+    return call<MeetingPrediction[]>("GET", `/predictions?${q}`);
+  },
+  delegates: (id: string) =>
+    call<{ event_id: string; title: string; critical: boolean; prediction: MeetingPrediction; candidates: DelegateSuggestion[] }>(
+      "GET", `/events/${encodeURIComponent(id)}/delegates`),
 };

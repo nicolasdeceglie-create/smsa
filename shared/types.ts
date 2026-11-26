@@ -89,3 +89,28 @@ export function quadrantOf(avgRating: number, avgEffort: number): Quadrant {
   if (!highRating && !highEffort) return "shorten";
   return "drop";
 }
+
+/** Previsione per un meeting futuro non ancora valutato (impara dai rating passati) */
+export interface MeetingPrediction {
+  event_id: string;
+  title: string;
+  start: string;
+  end: string;
+  rating: number;        // 1-5, previsto
+  effort: number;        // 1-5, previsto
+  quadrant: Quadrant;
+  confidence: "alta" | "media" | "bassa";  // quanti meeting simili ha già valutato l'utente
+  reasons: string[];     // perché, in italiano (li legge anche Claude)
+}
+
+/** Collega a cui delegare un meeting (dall'organigramma) */
+export interface DelegateSuggestion {
+  email: string;
+  nome: string;
+  ruolo: string;
+  seniority: string;
+  decision_autonomy: string;
+  available: boolean;    // libero in quell'orario
+  score: number;
+  reasons: string[];
+}

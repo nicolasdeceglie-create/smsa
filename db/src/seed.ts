@@ -29,7 +29,8 @@ interface SeedMeeting {
   note: string;
 }
 
-const TEAM = ["giulia.rossi@example.com", "marco.bianchi@example.com", "sara.verdi@example.com"];
+// Persone dell'organigramma (backend/data/organigramma.json), come nel mock del backend
+const TEAM = ["giulia.bianchi@azienda.it", "davide.ferrari@azienda.it", "sara.galli@azienda.it"];
 
 const MEETINGS: SeedMeeting[] = [
   // --- DROP: rating basso, effort alto (il "colpevole" della demo) ---
@@ -37,7 +38,7 @@ const MEETINGS: SeedMeeting[] = [
   { title: "Weekly status report", daysAgo: 15, hour: 15, durationMin: 60, attendees: TEAM, rating: 1, effort: 5, note: "Preparato report per 2 ore, nessuno l'ha guardato" },
   { title: "Weekly status report", daysAgo: 8, hour: 15, durationMin: 60, attendees: TEAM, rating: 2, effort: 4, note: "Si poteva fare via email" },
   { title: "Weekly status report", daysAgo: 1, hour: 15, durationMin: 60, attendees: TEAM, rating: 1, effort: 4, note: "Ancora slide lette ad alta voce" },
-  { title: "Allineamento commerciale", daysAgo: 12, hour: 11, durationMin: 90, attendees: ["luca.neri@example.com"], rating: 2, effort: 5, note: "Troppo lungo, temi fuori dal mio ambito" },
+  { title: "Allineamento commerciale", daysAgo: 12, hour: 11, durationMin: 90, attendees: ["luca.verdi@azienda.it"], rating: 2, effort: 5, note: "Troppo lungo, temi fuori dal mio ambito" },
 
   // --- SHORTEN: rating basso, effort basso ---
   { title: "Daily standup", daysAgo: 7, hour: 9, durationMin: 30, attendees: TEAM, rating: 2, effort: 2, note: "Sforato a 30 minuti" },
@@ -48,14 +49,14 @@ const MEETINGS: SeedMeeting[] = [
   // --- OPTIMIZE: rating alto, effort alto ---
   { title: "Sprint planning", daysAgo: 14, hour: 10, durationMin: 120, attendees: TEAM, rating: 4, effort: 5, note: "Utile ma estenuante" },
   { title: "Sprint planning", daysAgo: 3, hour: 10, durationMin: 120, attendees: TEAM, rating: 4, effort: 4, note: "Backlog non preparato prima" },
-  { title: "Demo cliente Acme", daysAgo: 9, hour: 14, durationMin: 60, attendees: ["cliente@acme.example"], rating: 5, effort: 5, note: "Contratto quasi chiuso, preparazione pesante" },
+  { title: "Demo cliente FinTech Italia", daysAgo: 9, hour: 14, durationMin: 60, attendees: ["r.marino@fintechitalia.it"], rating: 5, effort: 5, note: "Contratto quasi chiuso, preparazione pesante" },
 
   // --- KEEP: rating alto, effort basso ---
   { title: "1:1 con Giulia", daysAgo: 21, hour: 16, durationMin: 30, attendees: [TEAM[0]], rating: 5, effort: 2, note: "Molto utile" },
   { title: "1:1 con Giulia", daysAgo: 14, hour: 16, durationMin: 30, attendees: [TEAM[0]], rating: 4, effort: 1, note: "Sbloccato il problema sul deploy" },
   { title: "1:1 con Giulia", daysAgo: 7, hour: 16, durationMin: 30, attendees: [TEAM[0]], rating: 5, effort: 2, note: "" },
   { title: "Retrospettiva", daysAgo: 13, hour: 17, durationMin: 45, attendees: TEAM, rating: 4, effort: 2, note: "Buone azioni concrete" },
-  { title: "Caffè con Marco", daysAgo: 4, hour: 11, durationMin: 20, attendees: [TEAM[1]], rating: 4, effort: 1, note: "Idee per il progetto nuovo" },
+  { title: "Caffè con Davide", daysAgo: 4, hour: 11, durationMin: 20, attendees: [TEAM[1]], rating: 4, effort: 1, note: "Idee per il progetto nuovo" },
   { title: "Review architettura", daysAgo: 10, hour: 14, durationMin: 60, attendees: TEAM, rating: 5, effort: 3, note: "Decisioni chiare" },
 ];
 

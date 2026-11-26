@@ -27,6 +27,8 @@ Con `MOCK=true` (default) usa eventi finti in memoria, **scritture comprese**: l
 | POST | `/ratings` | `{ event_id, rating 1-5, effort 1-5, note? }` |
 | GET | `/ratings` | Rating con titolo, data e partecipanti dell'evento |
 | GET | `/ratings/summary` | Medie per meeting + quadrante (keep / optimize / shorten / drop) |
+| GET | `/predictions?from&to` | Rating ed effort previsti per i meeting futuri non valutati (default: adesso / +14 giorni) |
+| GET | `/events/:id/delegates` | Fino a 3 colleghi del team a cui delegare, da `data/organigramma.json` (utente: `USER_EMAIL`) |
 
 Gli errori sono `{ "error": "messaggio" }`: **li legge Claude**, quindi devono essere chiari.
 

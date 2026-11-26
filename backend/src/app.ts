@@ -9,6 +9,8 @@ import { addRating, getRatings, getSummary, upsertEventSnapshot } from "../../db
 import { config, HttpError } from "./config.ts";
 import { createEvent, deleteEvent, getEvent, listEvents, updateEvent } from "./calendar.ts";
 import { findFreeSlots } from "./freeSlots.ts";
+import { predict } from "./predict.ts";
+import { suggestDelegates } from "./delegate.ts";
 
 const app = express();
 app.use(cors());
@@ -99,6 +101,27 @@ app.get("/ratings", (_req, res) => {
 
 app.get("/ratings/summary", (_req, res) => {
   res.json(getSummary());
+});
+
+// Previsioni sui meeting futuri non ancora valutati (default: da adesso a +14 giorni)
+app.get("/predictions", async (req, res) => {
+  const now = Date.now();
+  const from = req.query.from ? parseDate(req.query.from, "from") : new Date(now);
+  const to = req.query.to ? parseDate(req.query.to, "to") : new Date(now + 14 * 86400_000);
+  const ratings = getRatings();
+  const rated = new Set(ratings.map((r) => r.event_id));
+  const events = (await listEvents(from, to)).filter((e) => !e.readonly && !rated.has(e.id));
+  res.json(events.map((e) => predict(e, ratings)));
+});
+
+// A chi del team delegare un meeting
+app.get("/events/:id/delegates", async (req, res) => {
+  const event = await getEvent(req.params.id);
+  const prediction = predict(event, getRatings());
+  const day = new Date(event.start).getTime();
+  const sameDays = await listEvents(new Date(day - 86400_000), new Date(day + 86400_000));
+  const critical = prediction.rating >= 4;
+  res.json({ event_id: event.id, title: event.title, critical, prediction, candidates: suggestDelegates(event, sameDays, critical) });
 });
 
 app.use((err: unknown, _req: Request, res: Response, _next: NextFunction) => {
