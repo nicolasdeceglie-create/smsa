@@ -1,0 +1,1053 @@
+{
+  "calendar_owner": "marco.rossi@azienda.it",
+  "events": [
+    {
+      "id": "evt_001",
+      "title": "Allineamento Settimanale Cross-Funzionale",
+      "description": "Aggiornamento generico sullo stato avanzamento lavori di tutti i reparti aziendali.",
+      "start": "2026-11-16T09:30:00+01:00",
+      "end": "2026-11-16T10:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "stefano.colombo@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "alto",
+      "likeability": 24
+    },
+    {
+      "id": "evt_002",
+      "title": "1:1 Marco / Valeria (CTO)",
+      "description": "Allineamento bisettimanale su obiettivi Q4, hiring e criticità del team software.",
+      "start": "2026-11-16T11:30:00+01:00",
+      "end": "2026-11-16T12:15:00+01:00",
+      "is_recurring": true,
+      "organizer": "valeria.marchetti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 95
+    },
+    {
+      "id": "evt_003",
+      "title": "Sprint Planning - Team Backend",
+      "description": "Definizione backlog sprint 42 per i microservizi di pagamento.",
+      "start": "2026-11-16T14:30:00+01:00",
+      "end": "2026-11-16T16:00:00+01:00",
+      "is_recurring": true,
+      "organizer": "silvia.fontana@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "ilaria.deluca@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.benedetti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "medio",
+      "likeability": 32
+    },
+    {
+      "id": "evt_004",
+      "title": "Steering Committee - FinTech Italia SpA",
+      "description": "Review avanzamento Piattaforma Pagamenti Core e approvazione milestone Q4 con il CTO cliente.",
+      "start": "2026-11-17T10:00:00+01:00",
+      "end": "2026-11-17T11:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "alessandro.conti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessandro.conti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "r.marino@fintechitalia.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "alto",
+      "likeability": 96
+    },
+    {
+      "id": "evt_005",
+      "title": "Review Design System & Componenti UI",
+      "description": "Revisione della libreria componenti React e linee guida accessibilità.",
+      "start": "2026-11-17T15:00:00+01:00",
+      "end": "2026-11-17T16:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "sara.galli@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "antonio.desantis@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sofia.romano@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "giulia.bianchi@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "basso",
+      "likeability": 28
+    },
+    {
+      "id": "evt_006",
+      "title": "Allineamento Integrazione Firmware-Cloud",
+      "description": "Definizione protocolli IoT tra centraline hardware e API backend.",
+      "start": "2026-11-18T10:00:00+01:00",
+      "end": "2026-11-18T11:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "luca.verdi@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "serena.testa@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 82
+    },
+    {
+      "id": "evt_007",
+      "title": "Demo Portale E-commerce B2B - RetailNow",
+      "description": "Presentazione avanzamento sprint e raccolta feedback operativi con il PM cliente.",
+      "start": "2026-11-18T14:30:00+01:00",
+      "end": "2026-11-18T15:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "p.deluca@retailnow.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "p.deluca@retailnow.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "matteo.lombardi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "medio",
+      "effort": "medio",
+      "likeability": 55
+    },
+    {
+      "id": "evt_008",
+      "title": "Audit Sicurezza & Cloud Migration - BancoMobile",
+      "description": "Verifica requisiti di compliance e sicurezza applicativa con la CISO di BancoMobile.",
+      "start": "2026-11-19T09:30:00+01:00",
+      "end": "2026-11-19T11:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "andrea.moretti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.messina@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "f.mancini@bancomobile.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "alto",
+      "likeability": 89
+    },
+    {
+      "id": "evt_009",
+      "title": "Retrospettiva QA & Automazione Test",
+      "description": "Analisi dei bug sfuggiti in produzione nell'ultimo rilascio e miglioramento pipeline CI/CD.",
+      "start": "2026-11-19T15:00:00+01:00",
+      "end": "2026-11-19T16:00:00+01:00",
+      "is_recurring": true,
+      "organizer": "caterina.lombardo@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "caterina.lombardo@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "beatrice.santoro@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "elena.neri@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "medio",
+      "effort": "basso",
+      "likeability": 48
+    },
+    {
+      "id": "evt_010",
+      "title": "Budgeting & Pianificazione Risorse 2027",
+      "description": "Definizione budget assunzioni, licenze software e formazione per il prossimo anno fiscale.",
+      "start": "2026-11-20T10:00:00+01:00",
+      "end": "2026-11-20T12:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "alessandro.conti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessandro.conti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "stefano.colombo@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "alto",
+      "likeability": 97
+    },
+    {
+      "id": "evt_011",
+      "title": "Aggiornamento Infrastruttura Kubernetes",
+      "description": "Dettagli tecnici sull'upgrade del cluster di staging e monitoraggio log.",
+      "start": "2026-11-20T15:00:00+01:00",
+      "end": "2026-11-20T16:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "francesco.desantis@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "francesco.desantis@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "daniele.carbone@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "alto",
+      "likeability": 21
+    },
+    {
+      "id": "evt_012",
+      "title": "Allineamento Settimanale Cross-Funzionale",
+      "description": "Aggiornamento generico sullo stato avanzamento lavori di tutti i reparti aziendali.",
+      "start": "2026-11-23T09:30:00+01:00",
+      "end": "2026-11-23T10:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "stefano.colombo@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "alto",
+      "likeability": 22
+    },
+    {
+      "id": "evt_013",
+      "title": "Review Roadmap Q1 con il CEO",
+      "description": "Definizione delle priorità strategiche e allocazione team sui progetti chiave Q1.",
+      "start": "2026-11-23T15:00:00+01:00",
+      "end": "2026-11-23T16:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "alessandro.conti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessandro.conti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 98
+    },
+    {
+      "id": "evt_014",
+      "title": "Kick-off API Gateway Polizze - InsureTech",
+      "description": "Definizione architettura ad alto livello e SLA con Head of IT Architecture del cliente.",
+      "start": "2026-11-24T10:30:00+01:00",
+      "end": "2026-11-24T12:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "v.martini@insuretech.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "v.martini@insuretech.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 91
+    },
+    {
+      "id": "evt_015",
+      "title": "Allineamento App Mobile Flutter",
+      "description": "Scelta librerie di state management e gestione notifiche push su iOS/Android.",
+      "start": "2026-11-24T15:00:00+01:00",
+      "end": "2026-11-24T16:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "pietro.santoro@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.santoro@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "lorenzo.mazza@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "federica.ferrara@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "basso",
+      "likeability": 30
+    },
+    {
+      "id": "evt_016",
+      "title": "Sync Cartella Clinica Cloud - HealthPlus",
+      "description": "Verifica conformità GDPR e gestione log accessi con Compliance Officer cliente.",
+      "start": "2026-11-25T10:00:00+01:00",
+      "end": "2026-11-25T11:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "e.bruno@healthplus.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "e.bruno@healthplus.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.messina@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "noemi.morelli@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 86
+    },
+    {
+      "id": "evt_017",
+      "title": "1:1 Marco / Davide Ferrari",
+      "description": "Feedback trimestrale, piano di crescita verso team management e carico di lavoro.",
+      "start": "2026-11-25T14:30:00+01:00",
+      "end": "2026-11-25T15:15:00+01:00",
+      "is_recurring": true,
+      "organizer": "marco.rossi@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "basso",
+      "likeability": 88
+    },
+    {
+      "id": "evt_018",
+      "title": "Stato Avanzamento Integrazione ERP - FashionCloud",
+      "description": "Controllo mapping campi magazzino e risoluzione ticket aperti.",
+      "start": "2026-11-25T16:30:00+01:00",
+      "end": "2026-11-25T17:15:00+01:00",
+      "is_recurring": true,
+      "organizer": "s.pellegrini@fashioncloud.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "s.pellegrini@fashioncloud.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "marta.benedetti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessio.romano@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "basso",
+      "effort": "medio",
+      "likeability": 38
+    },
+    {
+      "id": "evt_019",
+      "title": "Standup Tech Leads Software",
+      "description": "Allineamento rapido tra i 4 Tech Lead del team software su blocchi e dipendenze.",
+      "start": "2026-11-26T09:30:00+01:00",
+      "end": "2026-11-26T10:00:00+01:00",
+      "is_recurring": true,
+      "organizer": "marco.rossi@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "caterina.lombardo@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.santoro@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "basso",
+      "likeability": 90
+    },
+    {
+      "id": "evt_020",
+      "title": "Colloquio Tecnico Candidato Senior Java",
+      "description": "Valutazione competenze architetturali e fit culturale per nuova posizione aperta.",
+      "start": "2026-11-26T10:30:00+01:00",
+      "end": "2026-11-26T11:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "marco.rossi@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "marta.ferrara@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": "alto",
+      "effort": "medio",
+      "likeability": 85
+    },
+    {
+      "id": "evt_021",
+      "title": "Deep-dive Architettura API e Migrazione DB",
+      "description": "Analisi tecnica dei colli di bottiglia sulle chiamate REST e ottimizzazione indici SQL.",
+      "start": "2026-11-26T14:30:00+01:00",
+      "end": "2026-11-26T15:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "davide.ferrari@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "ginevra.bruno@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 34
+    },
+    {
+      "id": "evt_022",
+      "title": "Escalation Performance - FinTech Italia SpA",
+      "description": "Analisi picchi di latenza in produzione con il CTO cliente e definizione piano di rientro immediato.",
+      "start": "2026-11-26T16:00:00+01:00",
+      "end": "2026-11-26T17:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "r.marino@fintechitalia.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "r.marino@fintechitalia.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 97
+    },
+    {
+      "id": "evt_023",
+      "title": "Raccolta Feedback Funzionalità Onboarding",
+      "description": "Analisi qualitativa dei primi test utente sul nuovo flusso di registrazione app.",
+      "start": "2026-11-27T10:00:00+01:00",
+      "end": "2026-11-27T10:45:00+01:00",
+      "is_recurring": false,
+      "organizer": "sara.galli@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 45
+    },
+    {
+      "id": "evt_024",
+      "title": "Certificazione EMC & Test Prototipi Hardware",
+      "description": "Verifica risultati test di laboratorio sulle nuove schede PCB per LogiSmart.",
+      "start": "2026-11-27T11:30:00+01:00",
+      "end": "2026-11-27T12:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "valentina.fabbri@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "valentina.fabbri@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "edoardo.santoro@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 18
+    },
+    {
+      "id": "evt_025",
+      "title": "Allineamento Smart Grid Telemetry - EnergySync",
+      "description": "Definizione requisiti dashboard analytics e API ingestion con Head of Digital Transformation.",
+      "start": "2026-11-27T14:30:00+01:00",
+      "end": "2026-11-27T15:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "c.bellini@energysync.eu",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "c.bellini@energysync.eu",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessandro.conti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 94
+    },
+    {
+      "id": "evt_026",
+      "title": "Allineamento Settimanale Cross-Funzionale",
+      "description": "Aggiornamento generico sullo stato avanzamento lavori di tutti i reparti aziendali.",
+      "start": "2026-11-30T09:30:00+01:00",
+      "end": "2026-11-30T10:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "stefano.colombo@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 20
+    },
+    {
+      "id": "evt_027",
+      "title": "1:1 Marco / Valeria (CTO)",
+      "description": "Allineamento bisettimanale su obiettivi Q4, hiring e criticità del team software.",
+      "start": "2026-11-30T11:30:00+01:00",
+      "end": "2026-11-30T12:15:00+01:00",
+      "is_recurring": true,
+      "organizer": "valeria.marchetti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 96
+    },
+    {
+      "id": "evt_028",
+      "title": "Sprint Planning - Team Backend",
+      "description": "Definizione backlog sprint 43 per i microservizi di pagamento.",
+      "start": "2026-11-30T14:30:00+01:00",
+      "end": "2026-11-30T16:00:00+01:00",
+      "is_recurring": true,
+      "organizer": "silvia.fontana@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "silvia.fontana@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "davide.ferrari@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "daniele.caruso@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "alessio.caputo@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 29
+    },
+    {
+      "id": "evt_029",
+      "title": "Workshop Dispositivi Diagnostici - MedTech Group",
+      "description": "Definizione architettura software companion app e sync cloud con VP Engineering cliente.",
+      "start": "2026-12-01T10:00:00+01:00",
+      "end": "2026-12-01T11:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "m.ferretti@medtechgroup.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "m.ferretti@medtechgroup.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "pietro.santoro@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 92
+    },
+    {
+      "id": "evt_030",
+      "title": "Aggiornamento Tracking Flotta - TransportEasy",
+      "description": "Allineamento operativo su bug minori della mappa real-time e esportazione CSV.",
+      "start": "2026-12-01T15:00:00+01:00",
+      "end": "2026-12-01T15:45:00+01:00",
+      "is_recurring": false,
+      "organizer": "d.gatti@transporteasy.eu",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "d.gatti@transporteasy.eu",
+          "response_status": "accepted"
+        },
+        {
+          "email": "matteo.lombardi@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 42
+    },
+    {
+      "id": "evt_031",
+      "title": "Review FinOps & Ottimizzazione Costi Cloud",
+      "description": "Analisi spesa AWS/GCP e strategia di risparmio sulle istanze di sviluppo.",
+      "start": "2026-12-02T09:30:00+01:00",
+      "end": "2026-12-02T10:30:00+01:00",
+      "is_recurring": false,
+      "organizer": "arianna.ferrara@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "arianna.ferrara@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "francesco.desantis@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 54
+    },
+    {
+      "id": "evt_032",
+      "title": "Demo Portale E-commerce B2B - RetailNow",
+      "description": "Presentazione avanzamento sprint e raccolta feedback operativi con il PM cliente.",
+      "start": "2026-12-02T14:30:00+01:00",
+      "end": "2026-12-02T15:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "p.deluca@retailnow.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "p.deluca@retailnow.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "matteo.lombardi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "sara.galli@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 49
+    },
+    {
+      "id": "evt_033",
+      "title": "Allineamento Documentazione Tecnica API",
+      "description": "Standardizzazione spec OpenAPI/Swagger per i portali sviluppatori esterni.",
+      "start": "2026-12-03T10:00:00+01:00",
+      "end": "2026-12-03T11:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "noemi.morelli@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "noemi.morelli@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 38
+    },
+    {
+      "id": "evt_034",
+      "title": "Q4 Board Prep - Presentazione Risultati Tech",
+      "description": "Preparazione slide e KPI ingegneristici per il consiglio di amministrazione.",
+      "start": "2026-12-03T14:30:00+01:00",
+      "end": "2026-12-03T16:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "alessandro.conti@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "alessandro.conti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "valeria.marchetti@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "andrea.moretti@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 98
+    },
+    {
+      "id": "evt_035",
+      "title": "Sync Sensori IoT Magazzini - LogiSmart",
+      "description": "Allineamento su dashboard web di monitoraggio con Operations Director cliente.",
+      "start": "2026-12-04T10:00:00+01:00",
+      "end": "2026-12-04T11:00:00+01:00",
+      "is_recurring": false,
+      "organizer": "l.fontana@logismart.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "l.fontana@logismart.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "luca.verdi@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 88
+    },
+    {
+      "id": "evt_036",
+      "title": "Retrospettiva QA & Automazione Test",
+      "description": "Analisi dei bug dell'ultimo rilascio e copertura test automatici.",
+      "start": "2026-12-04T14:30:00+01:00",
+      "end": "2026-12-04T15:30:00+01:00",
+      "is_recurring": true,
+      "organizer": "caterina.lombardo@azienda.it",
+      "attendees": [
+        {
+          "email": "marco.rossi@azienda.it",
+          "response_status": "needsAction"
+        },
+        {
+          "email": "caterina.lombardo@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "emma.sala@azienda.it",
+          "response_status": "accepted"
+        },
+        {
+          "email": "giovanni.carbone@azienda.it",
+          "response_status": "accepted"
+        }
+      ],
+      "utilita": null,
+      "effort": null,
+      "likeability": 41
+    }
+  ]
+}

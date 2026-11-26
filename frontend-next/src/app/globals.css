@@ -1,0 +1,102 @@
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --border: #e1e8f2;
+    --line: #e8eef6;
+    --text: #0b1b33;
+    --muted: #4a5b78;
+    --muted-strong: #33475f;
+    --navy: #0b2545;
+    --navy-soft: #13315c;
+    --blue: #2563eb;
+    --blue-strong: #1d4ed8;
+    --blue-tint: #e0eaff;
+    --green: #16a34a;
+    --green-strong: #15803d;
+    --today: #f2fbf5;
+    --weekend: #fafbfd;
+
+    --good-bg: #dcfce7;
+    --good-fg: #166534;
+    --good: #15803d;
+    --mid-bg: #dbeafe;
+    --mid-fg: #1e40af;
+    --mid: #1d4ed8;
+    --bad-bg: #fef3c7;
+    --bad-fg: #92400e;
+    --bad: #b45309;
+
+    --q-keep: #16a34a;
+    --q-optimize: #d97706;
+    --q-shorten: #0891b2;
+    --q-drop: #dc2626;
+
+    --radius: 14px;
+    --font-body: var(--font-inter), system-ui, sans-serif;
+    --font-title: var(--font-grotesk), var(--font-body);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+}
+
+button,
+input {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
+    30% {
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.55);
+    }
+    60% {
+        box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.9);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.35;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

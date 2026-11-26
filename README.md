@@ -21,6 +21,7 @@ Claude Desktop ──stdio──► mcp/ ──HTTP──► backend/ ──► 
 | `backend/` | Backend | API REST Express, connettori Google / ICS / mock |
 | `mcp/` | Server MCP | Server MCP con 9 tool + 1 prompt per Claude Desktop |
 | `frontend/` | Frontend | Vite + React + FullCalendar: calendario, matrice, insight |
+| `frontend-next/` | Frontend | Next.js: calendario settimanale a schermo intero con utilità, effort e impact, dettaglio evento, attività di Claude. Vedi il suo README |
 
 Ogni cartella ha il suo `README.md` con **i ticket del team** (✅ già fatto nello scheletro, 🔲 da fare).
 
