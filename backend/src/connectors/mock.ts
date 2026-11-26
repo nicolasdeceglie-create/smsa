@@ -6,6 +6,7 @@
 import type { CalendarEvent, EventPatch, NewEvent } from "../../../shared/types.ts";
 import { toZonedIso, todayIn, zonedDate } from "../../../shared/time.ts";
 import { config } from "../config.ts";
+import { readDemoCalendar, toCalendarEvent } from "../../../shared/demoData.ts";
 
 // Persone dell'organigramma (backend/data/organigramma.json); l'utente è marco.rossi@azienda.it
 const TEAM = ["giulia.bianchi@azienda.it", "davide.ferrari@azienda.it", "sara.galli@azienda.it"];
@@ -67,7 +68,14 @@ function initialEvents(): CalendarEvent[] {
   return list;
 }
 
-let events: CalendarEvent[] = initialEvents();
+/** Con MOCK_DATA_FILE gli eventi arrivano dal calendario di esempio del gruppo DB */
+function loadEvents(): CalendarEvent[] {
+  if (!config.mockDataFile) return initialEvents();
+  const cal = readDemoCalendar(config.mockDataFile);
+  return cal.events.map((e) => toCalendarEvent(e, cal.calendar_owner));
+}
+
+let events: CalendarEvent[] = loadEvents();
 let counter = 0;
 
 export const mockConnector = {
