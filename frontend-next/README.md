@@ -21,7 +21,53 @@ copy .env.example .env.local   # su Mac/Linux: cp .env.example .env.local
 npm run dev                    # → http://localhost:3000
 ```
 
-Altri comandi: `npm run build`, `npm run start`, `npm run typecheck`.
+Altri comandi: `npm run build`, `npm run start`, `npm run typecheck`, `npm test`.
+
+## Collegarlo al backend
+
+Tre terminali, dalla radice della repo:
+
+```powershell
+# 1. database con i voti di esempio
+cd db; npm install; npm run reset
+
+# 2. backend (MOCK=true nel suo .env se non avete ancora Google)
+cd backend; npm install; copy .env.example .env; npm run dev
+
+# 3. frontend
+cd frontend-next; npm install
+```
+
+Poi in `frontend-next/.env.local`:
+
+```
+NEXT_PUBLIC_DATA_SOURCE=api
+BACKEND_URL=http://localhost:3001
+```
+
+e `npm run dev`. In alto a destra deve comparire "Live · aggiornato hh:mm". Per provare il lampeggio senza Claude basta spostare un evento a mano:
+
+```powershell
+curl -X PATCH http://localhost:3001/events/mock-planning -H "Content-Type: application/json" -d '{\"start\":\"2026-11-27T14:00:00+01:00\",\"end\":\"2026-11-27T16:00:00+01:00\"}'
+```
+
+Entro 3 secondi l'evento lampeggia con "Modificato da Claude" e compare in "Attività di Claude".
+
+## Test
+
+Vitest con Testing Library, in `test/`:
+
+| File | Cosa controlla |
+|---|---|
+| `api.test.ts` | chiamate al backend, conversione di voti e previsioni, voto trovato per titolo + orario se l'id è diverso, suggerimenti, errori |
+| `activity.test.ts` | confronto tra due letture: creato, spostato, rinominato, eliminato |
+| `scores.test.ts` | livelli, quadranti, colori, impact e suggerimenti |
+| `dates.test.ts` | settimana da lunedì, intervalli a cavallo di due mesi, formati |
+| `mock.test.ts` | lettura di `calendario.json` |
+| `components.test.tsx` | blocco evento, riquadro di dettaglio con le azioni, pannello laterale |
+| `useMeetings.test.ts` | conferma, elimina, modifica e simulazione di Claude |
+
+La CI (`.github/workflows/frontend-next.yml`) lancia typecheck, test e build a ogni pull request che tocca `frontend-next/` o `shared/`.
 
 ## Da dove arrivano i dati
 
@@ -56,6 +102,7 @@ src/
 
 ## Da fare con il backend
 
+- I voti del seed (`seed-N`) e gli eventi del connettore mock (`mock-*`) hanno id diversi: il frontend li collega per titolo e orario di inizio. Con Google Calendar gli id coincidono e il collegamento è diretto.
 - Il backend non ha ancora un endpoint per rispondere agli inviti: "Conferma partecipazione" per ora aggiorna solo la UI (`confirm` in `src/hooks/useMeetings.ts`).
 - `/events` non restituisce descrizione, organizzatore e ricorrenza: con `api` il riquadro mostra solo quello che arriva. Se il backend li aggiunge a `CalendarEvent`, basta mapparli in `src/lib/api.ts`.
 - L'impact dal backend parte dal rating previsto; se il gruppo DB aggiunge un campo `impact` vero, va letto al suo posto in `src/lib/api.ts`.
