@@ -23,7 +23,7 @@ export default function App() {
   return (
     <div className="app">
       <header className="header">
-        <h1>MeetWise</h1>
+        <h1>Kairos</h1>
         <span className="subtitle">Meno riunioni, più impatto</span>
         <div className="header-right">
           {health.data?.mock && <span className="badge badge-mock">MOCK</span>}

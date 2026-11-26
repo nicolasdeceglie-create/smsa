@@ -38,7 +38,7 @@ export function Header({ weekStart, status, onPrev, onNext, onToday }: Props) {
                     </svg>
                 </div>
                 <div>
-                    <span className={styles.name}>MeetWise</span>
+                    <span className={styles.name}>Kairos</span>
                     <span className={styles.tagline}>Meno riunioni, più impatto</span>
                 </div>
             </div>
