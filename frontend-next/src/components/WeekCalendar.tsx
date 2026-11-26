@@ -90,64 +90,91 @@ export function WeekCalendar({ weekStart, meetings, now, selectedId, flashIds, o
     return (
         <section className={styles.calendar} aria-label="Calendario settimanale">
             <div className={styles.legend}>
-                <span><i style={{ background: "var(--blue)" }} />Futuro</span>
-                <span><i style={{ background: "var(--q-keep)" }} />Da tenere</span>
-                <span><i style={{ background: "var(--q-optimize)" }} />Da ottimizzare</span>
-                <span><i style={{ background: "var(--q-shorten)" }} />Da accorciare</span>
-                <span><i style={{ background: "var(--q-drop)" }} />Da eliminare</span>
-                <span><i className={styles.dashed} />Da confermare</span>
+                <span>
+                    <i style={{ background: "var(--blue)" }} />
+                    Futuro
+                </span>
+                <span>
+                    <i style={{ background: "var(--q-keep)" }} />
+                    Da tenere
+                </span>
+                <span>
+                    <i style={{ background: "var(--q-optimize)" }} />
+                    Da ottimizzare
+                </span>
+                <span>
+                    <i style={{ background: "var(--q-shorten)" }} />
+                    Da accorciare
+                </span>
+                <span>
+                    <i style={{ background: "var(--q-drop)" }} />
+                    Da eliminare
+                </span>
+                <span>
+                    <i className={styles.dashed} />
+                    Da confermare
+                </span>
                 <span className={styles.legendNote}>U = utilità · E = effort</span>
             </div>
 
-            <div className={styles.days}>
-                <span />
-                {DAY_NAMES.map((name, i) => {
-                    const date = addDays(weekStart, i);
-                    const isToday = sameDay(date, now);
-                    return (
-                        <div key={name} className={`${styles.day} ${isToday ? styles.isToday : ""}`}>
-                            <span className={styles.dayName}>{name}</span>
-                            <span className={styles.dayNum}>{date.getDate()}</span>
-                        </div>
-                    );
-                })}
-            </div>
+            <div className={styles.scroller}>
+                <div className={styles.days}>
+                    <span />
+                    {DAY_NAMES.map((name, i) => {
+                        const date = addDays(weekStart, i);
+                        const isToday = sameDay(date, now);
+                        return (
+                            <div key={name} className={`${styles.day} ${isToday ? styles.isToday : ""}`}>
+                                <span className={styles.dayName}>{name}</span>
+                                <span className={styles.dayNum}>{date.getDate()}</span>
+                            </div>
+                        );
+                    })}
+                </div>
 
-            <div className={styles.grid} style={{ "--rows": rows, "--hours": to - from } as CSSProperties}>
-                {DAY_NAMES.map((name, i) => (
-                    <div
-                        key={name}
-                        className={styles.column}
-                        style={{ gridColumn: i + 2, background: i === todayIdx ? "var(--today)" : i > 4 ? "var(--weekend)" : undefined }}
-                    />
-                ))}
-                {Array.from({ length: to - from - 1 }, (_, i) => (
-                    <span key={i} className={styles.hour} style={{ gridRow: `${(i + 1) * 4 + 1} / span 4` }}>
-                        {from + i + 1}:00
-                    </span>
-                ))}
-                {showNow && (
-                    <div className={styles.now} style={{ gridColumn: todayIdx + 2, gridRow: rowOf(now) }} aria-label={`Ora attuale ${fmtTime(now)}`} />
-                )}
-                {week.map((m) => {
-                    const lane = laneInfo.get(m.id) ?? { lane: 0, of: 1 };
-                    return (
-                        <EventCard
-                            key={m.id}
-                            meeting={m}
-                            selected={m.id === selectedId}
-                            flashing={flashIds.has(m.id)}
-                            onOpen={() => onSelect(m.id)}
+                <div className={styles.grid} style={{ "--rows": rows, "--hours": to - from } as CSSProperties}>
+                    {DAY_NAMES.map((name, i) => (
+                        <div
+                            key={name}
+                            className={styles.column}
                             style={{
-                                gridColumn: dayIndex(weekStart, m.start) + 2,
-                                gridRow: `${rowOf(m.start)} / ${Math.max(rowOf(m.end), rowOf(m.start) + 1)}`,
-                                marginLeft: `calc(${(lane.lane / lane.of) * 100}% + 3px)`,
-                                width: `calc(${100 / lane.of}% - 7px)`,
+                                gridColumn: i + 2,
+                                background: i === todayIdx ? "var(--today)" : i > 4 ? "var(--weekend)" : undefined,
                             }}
                         />
-                    );
-                })}
-                {popover}
+                    ))}
+                    {Array.from({ length: to - from - 1 }, (_, i) => (
+                        <span key={i} className={styles.hour} style={{ gridRow: `${(i + 1) * 4 + 1} / span 4` }}>
+                            {from + i + 1}:00
+                        </span>
+                    ))}
+                    {showNow && (
+                        <div
+                            className={styles.now}
+                            style={{ gridColumn: todayIdx + 2, gridRow: rowOf(now) }}
+                            aria-label={`Ora attuale ${fmtTime(now)}`}
+                        />
+                    )}
+                    {week.map((m) => {
+                        const lane = laneInfo.get(m.id) ?? { lane: 0, of: 1 };
+                        return (
+                            <EventCard
+                                key={m.id}
+                                meeting={m}
+                                selected={m.id === selectedId}
+                                flashing={flashIds.has(m.id)}
+                                onOpen={() => onSelect(m.id)}
+                                style={{
+                                    gridColumn: dayIndex(weekStart, m.start) + 2,
+                                    gridRow: `${rowOf(m.start)} / ${Math.max(rowOf(m.end), rowOf(m.start) + 1)}`,
+                                    marginLeft: `calc(${(lane.lane / lane.of) * 100}% + 3px)`,
+                                    width: `calc(${100 / lane.of}% - 7px)`,
+                                }}
+                            />
+                        );
+                    })}
+                    {popover}
+                </div>
             </div>
         </section>
     );

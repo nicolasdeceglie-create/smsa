@@ -1,0 +1,266 @@
+/*
+ * Il blocco è un "container" della sua stessa misura: le @container query
+ * decidono cosa mostrare. Le parti che non entrano vengono nascoste del tutto,
+ * mai tagliate a metà.
+ */
+.event {
+    container: ev / size;
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-width: 0;
+    margin: 1px 0 2px;
+    padding: 0;
+    border-radius: 8px;
+    text-align: left;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid #d6e0ee;
+    box-shadow: inset 0 3px 0 var(--stripe), 0 1px 2px rgba(11, 27, 51, 0.08);
+    overflow: hidden;
+}
+
+.event:hover {
+    box-shadow: inset 0 3px 0 var(--stripe), 0 3px 8px rgba(11, 27, 51, 0.16);
+    z-index: 2;
+}
+
+.pending {
+    border-style: dashed;
+    border-color: #93b4f5;
+}
+
+.selected {
+    outline: 3px solid var(--navy);
+    outline-offset: 1px;
+}
+
+.flashing {
+    animation: flash 1s ease-in-out 3;
+    overflow: visible;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 100%;
+    padding: 7px 8px 5px;
+    min-width: 0;
+}
+
+.title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    overflow-wrap: anywhere;
+    flex: none;
+}
+
+.lock {
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+    vertical-align: -1px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+}
+
+.scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    flex: none;
+}
+
+.scores[data-size="short"],
+.dots {
+    display: none;
+}
+
+.chip {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    padding: 0 6px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.good {
+    background: var(--good-bg);
+    color: var(--good-fg);
+}
+
+.mid {
+    background: var(--mid-bg);
+    color: var(--mid-fg);
+}
+
+.bad {
+    background: var(--bad-bg);
+    color: var(--bad-fg);
+}
+
+.none {
+    color: var(--mid-fg);
+    box-shadow: inset 0 0 0 1px #93b4f5;
+}
+
+.time {
+    font-size: 11px;
+    line-height: 14px;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+}
+
+.mini {
+    min-width: 18px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+}
+
+.dot[data-tone="good"],
+.mini[data-tone="good"] {
+    background: var(--good);
+    color: #fff;
+}
+
+.dot[data-tone="mid"],
+.mini[data-tone="mid"] {
+    background: var(--mid);
+    color: #fff;
+}
+
+.dot[data-tone="bad"],
+.mini[data-tone="bad"] {
+    background: var(--bad);
+    color: #fff;
+}
+
+.flashBadge {
+    position: absolute;
+    top: -10px;
+    right: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: var(--green);
+    color: #fff;
+    white-space: nowrap;
+}
+
+/* colonna stretta: etichette corte "U alta", "E basso" */
+@container ev (max-width: 170px) {
+    .scores[data-size="long"] {
+        display: none;
+    }
+    .scores[data-size="short"] {
+        display: flex;
+    }
+}
+
+/* poco spazio in altezza: prima sparisce l'orario, poi il titolo va su una riga */
+@container ev (max-height: 84px) {
+    .time {
+        display: none;
+    }
+}
+
+@container ev (max-height: 62px) {
+    .title {
+        -webkit-line-clamp: 1;
+    }
+}
+
+/* le etichette vanno a capo e non ci stanno: prima si tolgono quelle */
+@container ev (max-height: 56px) and (max-width: 120px) {
+    .scores {
+        display: none !important;
+    }
+    .body {
+        flex-direction: row;
+        align-items: center;
+    }
+    .title {
+        flex: 1;
+        min-width: 0;
+    }
+    .dots {
+        display: flex;
+        flex: none;
+        gap: 3px;
+        align-items: center;
+    }
+}
+
+/* meeting molto brevi: titolo e pallini colorati sulla stessa riga */
+@container ev (max-height: 44px) {
+    .scores {
+        display: none !important;
+    }
+    .body {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 7px 2px;
+    }
+    .title {
+        flex: 1;
+        min-width: 0;
+    }
+    .dots {
+        display: flex;
+        flex: none;
+        gap: 3px;
+        align-items: center;
+    }
+}
+
+/* blocchi bassi ma non minuscoli: il titolo può andare su due righe più piccole */
+@container ev (max-height: 44px) and (min-height: 30px) {
+    .title {
+        -webkit-line-clamp: 2;
+        font-size: 11px;
+        line-height: 12px;
+    }
+}
+
+@container ev (max-height: 29px) {
+    .title {
+        font-size: 11px;
+        line-height: 13px;
+    }
+    .body {
+        padding: 2px 6px 1px;
+    }
+}
+
+/* colonne strettissime (weekend): via il lucchetto, resta il titolo */
+@container ev (max-width: 90px) {
+    .lock {
+        display: none;
+    }
+    .body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

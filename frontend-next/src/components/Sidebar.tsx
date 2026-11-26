@@ -49,6 +49,17 @@ export function Sidebar({ activity, upcoming, suggestions, selectedId, canSimula
                     <h2>Vale la pena andarci?</h2>
                     <span>Impact da 0 a 10 dei prossimi meeting, stimato dall&apos;IA</span>
                 </div>
+                <div className={styles.scale}>
+                    <span>
+                        <strong className={styles.goodText}>7–10</strong> vale la pena
+                    </span>
+                    <span>
+                        <strong className={styles.midText}>4–6</strong> valuta se delegarlo
+                    </span>
+                    <span>
+                        <strong className={styles.badText}>0–3</strong> puoi saltarlo
+                    </span>
+                </div>
                 {/* va a capo in una colonna nascosta: si vedono solo le righe che entrano intere */}
                 <div className={styles.impactList}>
                     {upcoming.map((m) => {
@@ -66,24 +77,14 @@ export function Sidebar({ activity, upcoming, suggestions, selectedId, canSimula
                                 <span className={styles.impactText}>
                                     <span className={styles.impactTitle}>{m.title}</span>
                                     <span className={styles.impactMeta}>
-                                        {fmtDayShort(m.start)} · {fmtTime(m.start)} · <strong className={styles[`${v.tone}Text`]}>{v.short}</strong>
+                                        {fmtDayShort(m.start)} · {fmtTime(m.start)} ·{" "}
+                                        <strong className={styles[`${v.tone}Text`]}>{v.short}</strong>
                                     </span>
                                 </span>
                             </button>
                         );
                     })}
                     {upcoming.length === 0 && <p className={styles.empty}>Nessun meeting futuro da valutare.</p>}
-                </div>
-                <div className={styles.scale}>
-                    <span>
-                        <strong className={styles.goodText}>7–10</strong> vale la pena
-                    </span>
-                    <span>
-                        <strong className={styles.midText}>4–6</strong> valuta se delegarlo
-                    </span>
-                    <span>
-                        <strong className={styles.badText}>0–3</strong> puoi saltarlo
-                    </span>
                 </div>
             </section>
 

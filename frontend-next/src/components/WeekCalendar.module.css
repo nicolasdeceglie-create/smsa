@@ -46,7 +46,7 @@
 .days,
 .grid {
     display: grid;
-    grid-template-columns: 52px repeat(5, minmax(0, 1fr)) repeat(2, minmax(0, 0.45fr));
+    grid-template-columns: 52px repeat(5, minmax(0, 1fr)) repeat(2, minmax(0, 0.6fr));
 }
 
 .days {
@@ -133,123 +133,31 @@
     background: var(--green);
 }
 
-/* ---- blocco evento ---- */
-.event {
-    position: relative;
-    z-index: 1;
-    display: block;
-    min-width: 0;
-    margin: 1px 0 2px;
-    padding: 6px 7px 3px;
-    border-radius: 8px;
-    text-align: left;
-    color: var(--text);
-    background: #fff;
-    border: 1px solid #d6e0ee;
-    box-shadow: inset 0 3px 0 var(--stripe), 0 1px 2px rgba(11, 27, 51, 0.08);
-}
-
-.event:hover {
-    box-shadow: inset 0 3px 0 var(--stripe), 0 3px 8px rgba(11, 27, 51, 0.16);
-}
-
-.pending {
-    border: 1px dashed #93b4f5;
-}
-
-.selected {
-    outline: 3px solid var(--navy);
-    outline-offset: 1px;
-}
-
-.flashing {
-    animation: flash 1s ease-in-out 3;
-}
-
-.eventBody {
+.scroller {
+    flex: 1;
+    min-height: 0;
     display: flex;
     flex-direction: column;
-    gap: 3px;
-    height: 100%;
-    overflow: hidden;
-    min-width: 0;
 }
 
-.eventTitle {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 15px;
-    flex: none;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+/* tablet e telefono: i giorni scorrono in orizzontale, le colonne restano leggibili */
+@media (max-width: 900px) {
+    .calendar {
+        flex: none;
+        height: 78vh;
+        min-height: 520px;
+    }
 
-.chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    flex: none;
-}
+    .scroller {
+        overflow-x: auto;
+    }
 
-.chip {
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 14px;
-    padding: 0 6px;
-    border-radius: 999px;
-    white-space: nowrap;
-}
+    .days,
+    .grid {
+        min-width: 980px;
+    }
 
-.good {
-    background: var(--good-bg);
-    color: var(--good-fg);
-}
-
-.mid {
-    background: var(--mid-bg);
-    color: var(--mid-fg);
-}
-
-.bad {
-    background: var(--bad-bg);
-    color: var(--bad-fg);
-}
-
-.none {
-    color: var(--mid-fg);
-    box-shadow: inset 0 0 0 1px #93b4f5;
-}
-
-.compact {
-    padding-top: 5px;
-}
-
-.compact .chips {
-    flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-.eventTime {
-    font-size: 11px;
-    line-height: 14px;
-    color: var(--muted);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.flashBadge {
-    position: absolute;
-    top: -10px;
-    right: 6px;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 999px;
-    background: var(--green);
-    color: #fff;
+    .legendNote {
+        margin-left: 0;
+    }
 }
